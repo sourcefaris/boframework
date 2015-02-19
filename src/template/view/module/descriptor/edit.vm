@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Workspace Management - Edit Descriptor</title>
+  <link type="text/css" rel="stylesheet" href="../../style.css">
+  <script type="text/javascript">
+  _editor_url = "../../htmlarea/";
+  _editor_lang = "en";
+</script>
+
+<script type="text/javascript" src="../../htmlarea/htmlarea.js"></script>
+</head>
+<body onload="HTMLArea.replaceAll();">
+#if (!$actionErrors.isEmpty())
+<div class="errorMessage">Errors</div>
+<ul class="errorMessage">
+#foreach( $error in $actionErrors ) <li>$error</li>
+#end
+</ul>
+#end
+
+<form method="post" action="update.action">
+<table bgcolor="#98COF4" border="0" cellpadding="5" cellspacing="1" width="98%">
+  <tr bgcolor="#d0dcff">
+        <td colspan="3"><b>Edit Descriptor</b></td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td style="font-weight: bold;" align="right" width="25%">Name:</td>
+    <td><input type="text" name="name" value="$!descriptor.name" maxlength="128">
+  </tr>
+  <tr bgcolor="#ffffff">
+        <td style="font-weight: bold;" align="right" valign="top">Description:</td>
+        <td>
+        	<input maxlength="128" name="description" size="25" value="$!descriptor.description"></td>
+  </tr>  
+  <tr bgcolor="#ffffff">
+  	<td style="font-weight: bold;" align="right" valign="top">Action Name:</td>
+  	<td><input type = "text" name="actionName" value="$!descriptor.actionName" maxlength="255">
+  	</td>
+  </tr>
+  <tr bgcolor="#e4e4e4">
+  	<td colspan="2"><input type="hidden" name="id" value="$!descriptor.id"><input type="submit" value="Update"><input type="reset" value="Reset">
+</td>
+  	</td>
+  </tr>
+</table>
+</form>
+<br>
+$!pesan
+#if($!pesan!="")
+
+#end
+
+<br>
+
+
+<p>&nbsp;</p>
+
+<script>
+function validasi(){
+if(FM.description.value==""){
+alert('warning');
+return false;
+}
+FM.submit();
+return true;
+}
+</script>
+</body>
+</html>
