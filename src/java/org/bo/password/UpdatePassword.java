@@ -30,7 +30,7 @@ public class UpdatePassword extends PasswordForm implements UserAccessorAware {
 			fieldExpressions = { 
 					@FieldExpressionValidator(fieldName = "verifyPassword", expression = "newPassword == verifyPassword", message = "Verify your new Password") })
 	public String execute() {
-		if (!sess.getCurrentUser().getPassword().equalsIgnoreCase(
+		if (!getCurrentUser().getPassword().equalsIgnoreCase(
 				su.encodeBase64(getCurrPassword()))) {
 			addFieldError("currPassword", "Your current password is invalid");
 		}
@@ -40,11 +40,11 @@ public class UpdatePassword extends PasswordForm implements UserAccessorAware {
 		User user;
 		LogInformation logInfo;
 
-		user = sess.getCurrentUser();
+		user = getCurrentUser();
 		logInfo = user.getLogInformation();
 
 		logInfo.setActiveFlag(LogInformation.ACTIVE);
-		logInfo.setLastUpdateBy(sess.getCurrentUser().getId());
+		logInfo.setLastUpdateBy(getCurrentUser().getId());
 		logInfo.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 
 		user.setPassword(su.encodeBase64(getNewPassword()));

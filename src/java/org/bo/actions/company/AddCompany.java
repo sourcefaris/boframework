@@ -4,17 +4,13 @@ import java.sql.Timestamp;
 
 import org.bo.LogInformation;
 import org.bo.entity.Company;
-import org.bo.security.SessionCredentials;
-import org.bo.security.SessionCredentialsAware;
 
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 import com.opensymphony.xwork2.validator.annotations.Validation;
 import com.opensymphony.xwork2.validator.annotations.Validations;
 
 @Validation
-public class AddCompany extends CompanyForm implements SessionCredentialsAware {
-
-	private SessionCredentials sessCredentials;
+public class AddCompany extends CompanyForm {
 
 	@Validations(requiredStrings = { @RequiredStringValidator(fieldName = "name", message = "Name can't be empty") })
 	public String execute() {
@@ -43,9 +39,9 @@ public class AddCompany extends CompanyForm implements SessionCredentialsAware {
 			 * 
 			 */
 
-			if (sessCredentials.getCurrentUser() != null) {
-				log.setCreateBy(sessCredentials.getCurrentUser().getId());
-				log.setLastUpdateBy(sessCredentials.getCurrentUser().getId());
+			if (getCurrentUser() != null) {
+				log.setCreateBy(getCurrentUser().getId());
+				log.setLastUpdateBy(getCurrentUser().getId());
 			}
 
 			log.setCreateDate(new Timestamp(System.currentTimeMillis()));
@@ -56,11 +52,6 @@ public class AddCompany extends CompanyForm implements SessionCredentialsAware {
 			persistence.save(comp);
 			return SUCCESS;
 		}
-
-	}
-
-	public void setSessionCredentials(SessionCredentials sessionCredentials) {
-		this.sessCredentials = sessionCredentials;
 
 	}
 

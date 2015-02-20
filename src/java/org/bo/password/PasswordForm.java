@@ -1,36 +1,22 @@
 package org.bo.password;
 
+import org.bo.DefaultAction;
 import org.bo.entity.User;
-import org.bo.persistence.PersistenceAware;
-import org.bo.persistence.PersistenceManager;
-import org.bo.security.SessionCredentials;
-import org.bo.security.SessionCredentialsAware;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 
-public class PasswordForm extends ActionSupport implements PersistenceAware, SessionCredentialsAware{
-	private PersistenceManager manager;
+public class PasswordForm extends DefaultAction{
 	private String id = "";
 	private String msg = "";
 	private String currPassword = "";
 	private String newPassword = "";
 	private String verifyPassword = "";
-	protected SessionCredentials sess;
 	User user = new User();
 	
 	public String execute(){
-		if(sess.getCurrentUser() != null){
-			user = sess.getCurrentUser();
+		if(getCurrentUser() != null){
+			user = getCurrentUser();
 		}
 		return SUCCESS;
-	}
-	public void setSessionCredentials(SessionCredentials sessionCredentials) {
-		this.sess = sessionCredentials;
-	}
-
-	public void setPersistenceManager(PersistenceManager persistenceManager) {
-		this.manager = persistenceManager;
 	}
 	
 	/**
@@ -61,12 +47,6 @@ public class PasswordForm extends ActionSupport implements PersistenceAware, Ses
 		this.msg = msg;
 	}
 
-	/**
-	 * @return the persistence
-	 */
-	public PersistenceManager getManager() {
-		return manager;
-	}
 	public User getUser() {
 		return user;
 	}

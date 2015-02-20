@@ -11,15 +11,11 @@ import org.apache.struts2.ServletActionContext;
 import org.bo.DefaultAction;
 import org.bo.LogInformation;
 import org.bo.entity.User;
-import org.bo.persistence.PersistenceManager;
-import org.bo.security.SessionCredentials;
 import org.bo.util.PropertyLooker;
 import org.bo.util.StringUtils;
 
 public class AuthenticationEmail extends DefaultAction {
 	private String id = "";
-	private PersistenceManager manager;
-	private SessionCredentials sess;
 	private LogInformation loginfo;
 	private User user;
 	private int e = 1;
@@ -31,17 +27,17 @@ public class AuthenticationEmail extends DefaultAction {
 			id = new StringUtils().decodeBase64(getId());
 		}
 
-		user = (User) getManager().getById(User.class, getId());
+		user = (User) persistence.getById(User.class, getId());
 
 		loginfo = user.getLogInformation();
 		loginfo.setActiveFlag(1);
 		loginfo.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 		if (e == OWNER_EDIT) {
-			loginfo.setLastUpdateBy(sess.getCurrentUser().getId());
+			loginfo.setLastUpdateBy(getCurrentUser().getId());
 		}
 		user.setLogInformation(loginfo);
 
-		getManager().save(user);
+		persistence.save(user);
 
 		HtmlEmail mail = new HtmlEmail();
 		mail.setHostName(get("email.smtp.server"));
@@ -92,31 +88,6 @@ public class AuthenticationEmail extends DefaultAction {
 	 */
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	/**
-	 * @return the persistence
-	 */
-	public PersistenceManager getManager() {
-		return manager;
-	}
-
-	/**
-	 * @param persistence
-	 *            the persistence to set
-	 */
-	public void setManager(PersistenceManager manager) {
-		this.manager = manager;
-	}
-
-	/**
-	 * @param sess
-	 *            the sess to set
-	 */
-
-	public void setSessionCredentials(SessionCredentials sessionCredentials) {
-		this.sess = sessionCredentials;
-
 	}
 
 	public int getE() {

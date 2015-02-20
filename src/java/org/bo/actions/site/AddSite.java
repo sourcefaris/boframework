@@ -4,7 +4,6 @@ import java.sql.Timestamp;
 
 import org.bo.LogInformation;
 import org.bo.entity.Site;
-import org.bo.security.SessionCredentials;
 
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 import com.opensymphony.xwork2.validator.annotations.Validation;
@@ -12,8 +11,6 @@ import com.opensymphony.xwork2.validator.annotations.Validations;
 
 @Validation
 public class AddSite extends SiteForm {
-
-	private SessionCredentials sessionCredentials;
 
 	@Validations(requiredStrings = {
 			@RequiredStringValidator(fieldName = "name", message = "Name can't be empty."),
@@ -45,9 +42,9 @@ public class AddSite extends SiteForm {
 
 			LogInformation log = new LogInformation();
 
-			if (sessionCredentials.getCurrentUser() != null) {
-				log.setCreateBy(sessionCredentials.getCurrentUser().getId());
-				log.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+			if (getCurrentUser() != null) {
+				log.setCreateBy(getCurrentUser().getId());
+				log.setLastUpdateBy(getCurrentUser().getId());
 			}
 
 			log.setCreateDate(new Timestamp(System.currentTimeMillis()));

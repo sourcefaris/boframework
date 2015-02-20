@@ -11,9 +11,8 @@ import com.opensymphony.xwork2.validator.annotations.Validation;
 import com.opensymphony.xwork2.validator.annotations.Validations;
 
 @Validation
-public class UpdateSite extends SiteForm implements SessionCredentialsAware {
+public class UpdateSite extends SiteForm {
 
-	private SessionCredentials sess;
 	private String id;
 	private Site site;
 
@@ -37,16 +36,12 @@ public class UpdateSite extends SiteForm implements SessionCredentialsAware {
 			site.setUrl_branding(getUrl_branding());
 			site.setSite_url(getSite_url());
 			logInfo = site.getLogInformation();
-			logInfo.setLastUpdateBy(sess.getCurrentUser().getId());
+			logInfo.setLastUpdateBy(getCurrentUser().getId());
 			logInfo.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 			site.setLogInformation(logInfo);
 			persistenceManager.save(site);
 			return SUCCESS;
 		}
-	}
-
-	public void setSessionCredentials(SessionCredentials sessionCredentials) {
-		this.sess = sessionCredentials;
 	}
 
 	/**
