@@ -33,9 +33,7 @@ public class LoginFilter implements Filter {
         
         if (servletPath.equals(loginAction) || servletPath.equals(loginPage) || extensions.contains(extension)) {
             chain.doFilter(req, res);
-            System.out.println("loginAction");
         } else if (req.getSession(true).getAttribute(LOGIN_GA_USER) == null) {
-            System.out.println("redirecting");
             res.sendRedirect(contextPath + loginPage + "?redirectUri=" + servletPath);
             
             return;

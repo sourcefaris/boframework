@@ -13,7 +13,6 @@ public class PropertyLooker {
 		} catch (IOException e){
 			e.printStackTrace();
 		} catch (NullPointerException npe) {
-			System.out.println("file conf.properties is not in classpath");
 			npe.printStackTrace();
 		}
 	}

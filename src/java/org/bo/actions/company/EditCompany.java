@@ -8,7 +8,6 @@ import org.bo.entity.Company;
 public class EditCompany extends CompanyForm {
 
 	public String execute() {
-		System.out.println("UPDATE");
 		Company comp = (Company) persistence.getById(Company.class, getId());
 
 		if (comp == null) {

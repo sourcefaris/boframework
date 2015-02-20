@@ -11,7 +11,6 @@ public class EditDescriptor extends DescriptorForm {
 	protected List tmp = new ArrayList();
 
 	public String execute() {
-		System.out.println("UPDATE");
 		Descriptor descr = (Descriptor) persistence.getById(Descriptor.class, getId());
 		if (descr == null) {
 			addActionError("Cannot find such descriptor");

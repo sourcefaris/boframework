@@ -32,7 +32,6 @@ public class SearchRole extends RoleForm
 	public String execute() {
 		
 		setCurrDescriptor(getCurrDescriptorUrl());
-		System.out.println("URL "+getCurrDescriptorUrl());
 		try {
 			sess = hsf.createSession();
 			Criteria crit = sess.createCriteria(Role.class);

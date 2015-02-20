@@ -80,7 +80,6 @@ public class RegisterUser extends RegistrationForm implements UserAccessorAware 
 		}
 		String srole = get("application.role.default");
 		Role role;
-		System.out.println("ROLE = " + srole);
 		if (srole != null && !"".equals(srole)) {
 			role = (Role) persistence.getByUniqueField(Role.class, srole, "name");
 		} else {

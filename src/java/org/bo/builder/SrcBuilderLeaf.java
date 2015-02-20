@@ -45,7 +45,6 @@ public class SrcBuilderLeaf {
 			if(totalChild>0){
 				XML_BUILDER_LEAF = XML_BUILDER_LEAF+rpb.createXmlCode(rolename, sbvm, filevm, directory);
 			} else {
-				System.out.println(mf.getId()+" dapaaattttttt");
 				XML_BUILDER_LEAF=XML_BUILDER_LEAF+"\t<!-- "+mf.getModuleDescriptor().getDescription()+" -->\n";
 				XML_BUILDER_LEAF=XML_BUILDER_LEAF+"\t<package name=\""+mf.getModuleDescriptor().getName()+"\" extends=\"default\" namespace=\"/module/"+mf.getModuleDescriptor().getName()+"\">\n";
 				XML_BUILDER_LEAF=XML_BUILDER_LEAF+"\t\t<action name=\""+mf.getModuleDescriptor().getActionName()+"\">\n";

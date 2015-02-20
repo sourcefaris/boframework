@@ -13,7 +13,6 @@ public class RoleForm extends DefaultAction {
 	private String name="";
 	private String description="";
 	public String execute(){
-		System.out.println(getCurrentUser().getId());
 		user = (User) persistence.getById(User.class, getCurrentUser().getId());
 		return SUCCESS;
 	}
