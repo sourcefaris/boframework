@@ -52,7 +52,7 @@ public class AddSite extends SiteForm {
 			log.setActiveFlag(LogInformation.ACTIVE);
 
 			newSite.setLogInformation(log);
-			persistenceManager.save(newSite);
+			persistence.save(newSite);
 
 			return SUCCESS;
 		}

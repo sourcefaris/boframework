@@ -1,15 +1,10 @@
 package org.bo.security.actions.usermanager;
 
 
+import org.bo.DefaultAction;
 import org.bo.entity.User;
-import org.bo.persistence.PersistenceAware;
-import org.bo.persistence.PersistenceManager;
 
-import com.opensymphony.xwork2.ActionSupport;
-
-public class ViewUser extends ActionSupport implements PersistenceAware {
-
-	protected PersistenceManager pm;
+public class ViewUser extends DefaultAction {
 	protected User user;
 	private String id;
 
@@ -22,13 +17,10 @@ public class ViewUser extends ActionSupport implements PersistenceAware {
 	public User getUser() {
 		return user;
 	}
-	public void setPersistenceManager(PersistenceManager persistenceManager) {
-		this.pm = persistenceManager;
-	}
 
 	public String execute() {
 
-		user = (User) pm.getById(User.class, getId());
+		user = (User) persistence.getById(User.class, getId());
 		if (user == null) {
 			addActionError("Cannot find such descriptor");
 			return ERROR;

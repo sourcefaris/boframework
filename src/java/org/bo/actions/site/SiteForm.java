@@ -8,9 +8,8 @@ import org.bo.entity.User;
 import org.bo.persistence.PersistenceAware;
 import org.bo.persistence.PersistenceManager;
 
-public class SiteForm extends DefaultAction implements PersistenceAware
+public class SiteForm extends DefaultAction
 {
-	protected PersistenceManager persistenceManager;
 	protected LogInformation logInfo;
 	private User user = new User();
 	
@@ -30,7 +29,7 @@ public class SiteForm extends DefaultAction implements PersistenceAware
  	private String site_headline="";
  	
  	public String execute(){
- 		user = (User) persistenceManager.getById(User.class, getCurrentUser().getId());
+ 		user = (User) persistence.getById(User.class, getCurrentUser().getId());
  		return SUCCESS;
  	}
  	
@@ -87,12 +86,6 @@ public class SiteForm extends DefaultAction implements PersistenceAware
 	}
 	public void setNotify_message(String notify_message) {
 		this.notify_message = notify_message;
-	}
-	public PersistenceManager getPersistenceManager() {
-		return persistenceManager;
-	}
-	public void setPersistenceManager(PersistenceManager persistenceManager) {
-		this.persistenceManager = persistenceManager;
 	}
 	public String getSite_headline() {
 		return site_headline;

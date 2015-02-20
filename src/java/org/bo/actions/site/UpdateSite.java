@@ -23,7 +23,7 @@ public class UpdateSite extends SiteForm {
 		if (hasErrors()) {
 			return INPUT;
 		} else {
-			site = (Site) persistenceManager.getById(Site.class, getId());
+			site = (Site) persistence.getById(Site.class, getId());
 
 			site.setName(getName());
 			site.setDescription(getDescription());
@@ -39,7 +39,7 @@ public class UpdateSite extends SiteForm {
 			logInfo.setLastUpdateBy(getCurrentUser().getId());
 			logInfo.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 			site.setLogInformation(logInfo);
-			persistenceManager.save(site);
+			persistence.save(site);
 			return SUCCESS;
 		}
 	}

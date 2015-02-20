@@ -52,10 +52,6 @@ public class LoginForm extends DefaultAction implements UserAccessorAware {
 		this.ua = ua;
 	}
 
-	public void setPersistenceManager(PersistenceManager persistenceManager) {
-		this.persistence = persistenceManager;
-	}
-
 	public String getUsername() {
 		return username;
 	}

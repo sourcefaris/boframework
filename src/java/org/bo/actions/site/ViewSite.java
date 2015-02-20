@@ -1,26 +1,16 @@
 package org.bo.actions.site;
 
+import org.bo.DefaultAction;
 import org.bo.entity.Site;
-import org.bo.persistence.PersistenceAware;
-import org.bo.persistence.PersistenceManager;
 
-import com.opensymphony.xwork2.ActionSupport;
-
-public class ViewSite extends ActionSupport implements PersistenceAware {
-
-	protected PersistenceManager pm;
+public class ViewSite extends DefaultAction{
 	protected Site site;
 	private String id = "";
-
-	public void setPersistenceManager(PersistenceManager persistenceManager) {
-		this.pm = persistenceManager;
-
-	}
 
 	public String execute() {
 		if (!id.equalsIgnoreCase(""))
 		{
-			site = (Site) pm.getById(Site.class, getId());
+			site = (Site) persistence.getById(Site.class, getId());
 			return SUCCESS;
 		}
 		else

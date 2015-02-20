@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.bo.DefaultAction;
 import org.bo.entity.User;
-import org.bo.persistence.PersistenceManager;
 
 public class ConfirmChange extends DefaultAction {
 	
@@ -57,12 +56,6 @@ public class ConfirmChange extends DefaultAction {
 	 */
 	public void setUsers(List<User> users) {
 		this.users = users;
-	}
-	/**
-	 * @return the persistence
-	 */
-	public PersistenceManager getManager() {
-		return persistence;
 	}
 	/**
 	 * @return the id

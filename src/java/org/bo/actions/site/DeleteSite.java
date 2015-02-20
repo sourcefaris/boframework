@@ -4,7 +4,7 @@ public class DeleteSite extends ViewSite {
 
 	public String execute() {
 		if (super.execute().equalsIgnoreCase(SUCCESS)) {
-		pm.remove(site);
+		persistence.remove(site);
 		return SUCCESS;
 		
 		} else {
