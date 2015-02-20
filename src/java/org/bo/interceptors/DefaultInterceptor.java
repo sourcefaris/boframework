@@ -97,15 +97,15 @@ public class DefaultInterceptor implements Interceptor, PersistenceAware,
 
 	private boolean checkLeafDescriptor(ModuleFunction parent) {
 		for (ModuleFunction mf : parent.getModuleFunctions()) {
-			if (mf.getModuleFunctions().size() <= 0) {
-				if (descriptorCalled.equals(mf.getModuleDescriptor())) {
-					return true;
-				}
-			} else {
+			if(mf.getModuleFunctions().size()>0) {
 				if (checkLeafDescriptor(mf)) {
 					return true;
 				}
-			}
+			} else {
+				if (descriptorCalled.equals(mf.getModuleDescriptor())) {
+					return true;
+				}
+			} 
 		}
 		return false;
 	}
@@ -113,11 +113,11 @@ public class DefaultInterceptor implements Interceptor, PersistenceAware,
 	private List<ModuleFunction> getLeafPrivilage(ModuleFunction parent) {
 		List<ModuleFunction> mfs = new ArrayList<ModuleFunction>();
 		for (ModuleFunction mf : parent.getModuleFunctions()) {
-			if (mf.getModuleFunctions().size() <= 0) {
-				mfs.add(mf);
-			} else {
+			if (mf.getModuleFunctions().size() > 0) {
 				mfs.addAll(getLeafPrivilage(mf));
-			}
+			} else {
+				mfs.add(mf);
+			} 
 		}
 		return mfs;
 	}
