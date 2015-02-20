@@ -8,8 +8,6 @@ import org.bo.LogInformation;
 import org.bo.entity.Company;
 import org.bo.entity.Role;
 import org.bo.entity.User;
-import org.bo.security.SessionCredentials;
-import org.bo.security.SessionCredentialsAware;
 import org.bo.util.StringUtils;
 
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
@@ -36,18 +34,6 @@ public class AddUser extends UserForm {
 	public String execute() {
 		String pass = "";
 		StringUtils su = new StringUtils();
-//		if (getUser().getUsername().equalsIgnoreCase(""))
-//			addActionError("Username can't be empty.");
-//
-//		if (getUser().getId() == null || "".equalsIgnoreCase(getUser().getId())) {
-//			if (getUser().getPassword() == null
-//					|| "".equalsIgnoreCase(getUser().getPassword()))
-//				addActionError("Password can't be empty.");
-//
-//			if (getUser().getPassword().length() < 3) {
-//				addActionError("Password must have minimal 3 characters !!");
-//			}
-//		}
 
 		if (hasErrors()) {
 			return INPUT;

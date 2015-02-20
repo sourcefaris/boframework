@@ -8,10 +8,6 @@ import org.bo.entity.ModuleFunction;
 import org.bo.entity.RolePrivilage;
 import org.bo.entity.RoleSite;
 import org.bo.entity.RoleSitePrivilage;
-import org.bo.persistence.PersistenceAware;
-import org.bo.persistence.PersistenceManager;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 public class ViewMod extends DefaultAction{
 	private List<ModuleFunction> mfunctions = new ArrayList<ModuleFunction>();

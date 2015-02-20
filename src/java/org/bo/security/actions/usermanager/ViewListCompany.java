@@ -5,10 +5,6 @@ import java.util.List;
 
 import org.bo.DefaultAction;
 import org.bo.entity.Company;
-import org.bo.persistence.PersistenceAware;
-import org.bo.persistence.PersistenceManager;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 public class ViewListCompany extends DefaultAction{
 	private List perusahaan = new ArrayList();

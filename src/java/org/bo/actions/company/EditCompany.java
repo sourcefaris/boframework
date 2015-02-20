@@ -4,12 +4,8 @@ import java.sql.Timestamp;
 
 import org.bo.LogInformation;
 import org.bo.entity.Company;
-import org.bo.security.SessionCredentials;
-import org.bo.security.SessionCredentialsAware;
 
 public class EditCompany extends CompanyForm {
-
-	private SessionCredentials sessCredentials;
 
 	public String execute() {
 		System.out.println("UPDATE");
@@ -38,8 +34,8 @@ public class EditCompany extends CompanyForm {
 
 			LogInformation log = comp.getLogInformation();
 			
-			if (sessCredentials.getCurrentUser()!=null) {
-			log.setLastUpdateBy(sessCredentials.getCurrentUser().getId());
+			if (getCurrentUser()!=null) {
+			log.setLastUpdateBy(getCurrentUser().getId());
 			log.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 			}
 
@@ -54,11 +50,6 @@ public class EditCompany extends CompanyForm {
 				return SUCCESS;
 			}
 		}
-
-	}
-
-	public void setSessionCredentials(SessionCredentials sessionCredentials) {
-		this.sessCredentials = sessionCredentials;
 
 	}
 

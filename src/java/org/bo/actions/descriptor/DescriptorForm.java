@@ -6,8 +6,6 @@ import java.util.List;
 import org.bo.DefaultAction;
 import org.bo.entity.Descriptor;
 import org.bo.entity.User;
-import org.bo.persistence.PersistenceAware;
-import org.bo.persistence.PersistenceManager;
 
 public class DescriptorForm extends DefaultAction {
 	private User user = new User();
