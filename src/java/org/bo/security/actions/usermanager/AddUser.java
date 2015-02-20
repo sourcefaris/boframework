@@ -65,13 +65,13 @@ public class AddUser extends UserForm {
 			LogInformation log;
 			if (getUser().getId() == null) {
 				log = new LogInformation();
-				log.setCreateBy(sessionCredentials.getCurrentUser().getId());
+				log.setCreateBy(getCurrentUser().getId());
 				log.setCreateDate(new Timestamp(System.currentTimeMillis()));
 				pass = su.encodeBase64(getUser().getPassword());
 			} else if (getUser().getId() != null
 					&& "".equalsIgnoreCase(getUser().getId())) {
 				log = new LogInformation();
-				log.setCreateBy(sessionCredentials.getCurrentUser().getId());
+				log.setCreateBy(getCurrentUser().getId());
 				log.setCreateDate(new Timestamp(System.currentTimeMillis()));
 				getUser().setId(null);
 				pass = su.encodeBase64(getUser().getPassword());
@@ -94,7 +94,7 @@ public class AddUser extends UserForm {
 
 			}
 			log.setActiveFlag(LogInformation.ACTIVE);
-			log.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+			log.setLastUpdateBy(getCurrentUser().getId());
 			log.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 
 			getUser().setPassword(pass);

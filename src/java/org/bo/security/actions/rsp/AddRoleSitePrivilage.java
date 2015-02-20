@@ -35,9 +35,9 @@ public class AddRoleSitePrivilage extends Master {
 			return INPUT;
 		}
 		LogInformation log = new LogInformation();
-		log.setCreateBy(sessionCredentials.getCurrentUser().getId());
+		log.setCreateBy(getCurrentUser().getId());
 		log.setCreateDate(new Timestamp(System.currentTimeMillis()));
-		log.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+		log.setLastUpdateBy(getCurrentUser().getId());
 		log.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 		log.setActiveFlag(1);
 

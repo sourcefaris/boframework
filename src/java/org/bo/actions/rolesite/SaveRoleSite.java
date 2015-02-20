@@ -23,9 +23,9 @@ public class SaveRoleSite extends RoleSiteForm {
 		}
 		LogInformation log = new LogInformation();
 		log.setActiveFlag(LogInformation.ACTIVE);
-		log.setCreateBy(sessionCredentials.getCurrentUser().getId());
+		log.setCreateBy(getCurrentUser().getId());
 		log.setCreateDate(new Timestamp(System.currentTimeMillis()));
-		log.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+		log.setLastUpdateBy(getCurrentUser().getId());
 		log.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 		
 		getRolesite().setRole(getRole());

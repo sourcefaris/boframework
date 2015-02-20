@@ -17,17 +17,6 @@ public class RoleForm extends DefaultAction {
 		user = (User) persistence.getById(User.class, getCurrentUser().getId());
 		return SUCCESS;
 	}
-	
-
-	public String getCurrDescriptor() {
-		return currDescriptor;
-	}
-
-
-	public void setCurrDescriptor(String currDescriptor) {
-		this.currDescriptor = currDescriptor;
-	}
-
 
 	/**
 	 * @return Returns the description.

@@ -37,8 +37,8 @@ public class EditRole extends RoleForm {
 
 				LogInformation log = role.getLogInformation();
 				
-				if (sessionCredentials.getCurrentUser()!= null) {
-				log.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());}
+				if (getCurrentUser()!= null) {
+				log.setLastUpdateBy(getCurrentUser().getId());}
 				log.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 				role.setLogInformation(log);
 				persistence.save(role);

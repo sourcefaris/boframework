@@ -18,8 +18,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class DefaultAction extends ActionSupport implements PersistenceAware, SessionCredentialsAware {
 	protected PersistenceManager persistence;
-	protected SessionCredentials sessionCredentials;
-	protected String currDescriptor;
+	private SessionCredentials sessionCredentials;
+	private String currDescriptor;
 	
 	private static Properties properties = new Properties();
 	static {

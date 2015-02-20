@@ -37,9 +37,9 @@ public class AddPrivilage extends DefaultAction{
 			
 			logInfo = new LogInformation();
 			logInfo.setActiveFlag(LogInformation.ACTIVE);
-			logInfo.setCreateBy(sessionCredentials.getCurrentUser().getId());
+			logInfo.setCreateBy(getCurrentUser().getId());
 			logInfo.setCreateDate(new Timestamp(System.currentTimeMillis()));
-			logInfo.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+			logInfo.setLastUpdateBy(getCurrentUser().getId());
 			logInfo.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 			
 			rolePrivilage.setLogInformation(logInfo);

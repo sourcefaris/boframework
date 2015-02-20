@@ -31,9 +31,9 @@ public class AddRole extends RoleForm{
 			// logging information
 			LogInformation log = new LogInformation();
 			
-			if (sessionCredentials.getCurrentUser() != null ) {
-				log.setCreateBy(sessionCredentials.getCurrentUser().getId());
-				log.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+			if (getCurrentUser() != null ) {
+				log.setCreateBy(getCurrentUser().getId());
+				log.setLastUpdateBy(getCurrentUser().getId());
 				
 			}
 			

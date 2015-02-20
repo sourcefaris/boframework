@@ -47,9 +47,9 @@ public class AddModuleFunction extends ModuleFunctionForm {
 		moduleFunction.setModuleFunction(mf);
 
 		logInfo = new LogInformation();
-		logInfo.setCreateBy(sessionCredentials.getCurrentUser().getId());
+		logInfo.setCreateBy(getCurrentUser().getId());
 		logInfo.setCreateDate(new Timestamp(System.currentTimeMillis()));
-		logInfo.setLastUpdateBy(sessionCredentials.getCurrentUser().getId());
+		logInfo.setLastUpdateBy(getCurrentUser().getId());
 		logInfo.setLastUpdateDate(new Timestamp(System.currentTimeMillis()));
 		logInfo.setActiveFlag(LogInformation.ACTIVE);
 		moduleFunction.setLogInformation(logInfo);
