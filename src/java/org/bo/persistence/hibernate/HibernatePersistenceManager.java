@@ -18,7 +18,7 @@ import org.hibernate.classic.Session;
 import org.hibernate.type.Type;
 
 public class HibernatePersistenceManager implements PersistenceManager,
-		HibernateSessionFactoryAware { // , Initializable, Disposable {
+		HibernateSessionFactoryAware { 
 
 	private static Map classToHibernateTypeMap = new HashMap();
 
@@ -54,13 +54,7 @@ public class HibernatePersistenceManager implements PersistenceManager,
 	}
 
 	public void init() {
-		try {
-			// session = sessionFactory.openSession();
-			session = hibernateSessionFactory.createSession();
-		} catch (HibernateException e) {
-			throw new PersistenceException(
-					"Couldn't init HibernatePersistenceManager", e);
-		}
+		session = hibernateSessionFactory.createSession();
 	}
 
 	public void dispose() {
