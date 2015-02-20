@@ -15,7 +15,7 @@
 	<td width=60%>None</td>
 	<td><input type="button" onClick="javascript:window.opener.document.getElementById('viewroleId').value='';window.opener.document.getElementById('viewroleId').value='None';window.close();" value="Set"></td>
 </tr>
-#foreach ($p in $lihatrole)
+#foreach ($p in $roles)
 <tr>
 	<td width=60%>$p.name</td>	
 	<td><input type="button" onClick="javascript:window.opener.document.getElementById('viewroleId').value='$p.id';window.opener.document.getElementById('lihatroleName').value='$p.name';window.close();" value="Set"></td>
