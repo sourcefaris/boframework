@@ -9,7 +9,6 @@ import org.bo.entity.Role;
 import org.bo.entity.RoleSite;
 import org.bo.entity.Site;
 import org.bo.entity.User;
-import org.bo.persistence.PersistenceManager;
 import org.bo.security.LoginFilter;
 import org.bo.security.UserAccessor;
 import org.bo.security.UserAccessorAware;

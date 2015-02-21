@@ -5,28 +5,22 @@ import java.util.List;
 
 import org.bo.DefaultAction;
 import org.bo.entity.Descriptor;
-import org.bo.entity.User;
 
 public class DescriptorForm extends DefaultAction {
-	private User user = new User();
 	private String id;
-	private String name="";
-	private String description="";
+	private String name = "";
+	private String description = "";
 	private String actionName = "";
 	protected Descriptor descr = new Descriptor();
 	protected List<Descriptor> descrs = new ArrayList<Descriptor>();
-	
-	public String execute(){
-		user = (User) persistence.getById(User.class, getCurrentUser().getId());
-		
+
+	public String execute() {
 		return SUCCESS;
 	}
-	
-	
+
 	public List<Descriptor> getDescrs() {
 		return descrs;
 	}
-
 
 	public void setDescrs(List<Descriptor> descrs) {
 		this.descrs = descrs;
@@ -72,14 +66,4 @@ public class DescriptorForm extends DefaultAction {
 		this.descr = descr;
 	}
 
-
-	public User getUser() {
-		return user;
-	}
-
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-	
 }

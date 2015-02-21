@@ -36,10 +36,6 @@ public class SearchModuleFunction extends ModuleFunctionForm implements
 				crit.add(Expression.like("description", "%" + getDescription()
 						+ "%"));
 			}
-			if (!getTableReferences().equalsIgnoreCase("")) {
-				crit.add(Expression.like("table_ref", "%"
-						+ getTableReferences() + "%"));
-			}
 			if (!getModuleFunctionId().equalsIgnoreCase("")) {
 				crit.add(Expression.like("moduleFunction.Id", "%"
 						+ getModuleFunctionId() + "%"));

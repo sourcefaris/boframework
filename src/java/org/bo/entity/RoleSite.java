@@ -18,11 +18,7 @@ public class RoleSite extends DefaultPersistence{
 	
 	private Role role;
 	private Site site;
-	
-	/**
-	 * 
-	 * @hibernate.many-to-one column="role_id"
-	 */
+
 	@ManyToOne
 	@JoinColumn(name="role_id")
 	public Role getRole() {
@@ -32,10 +28,6 @@ public class RoleSite extends DefaultPersistence{
 		this.role = role;
 	}
 
-	/**
-	 * 
-	 * @hibernate.many-to-one column="site_id"
-	 */
 	@ManyToOne
 	@JoinColumn(name="rsite_id")
 	public Site getSite() {
