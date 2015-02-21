@@ -47,7 +47,7 @@ public class RoleForm extends DefaultAction {
 	}
 
 	public String getDefaultDirectory() {
-		return PropertyLooker.get("aplication.workspace.default");
+		return PropertyLooker.get("application.workspace.default");
 	}
 
 }

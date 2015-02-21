@@ -54,13 +54,15 @@ public class SrcBuilderLeaf {
 				
 				boolean identification = (new File(directory+"/src/template/"+rolename+"/"+mf.getModuleDescriptor().getName())).mkdirs();
 				filevm = new File(directory+"/src/template/"+rolename+"/"+mf.getModuleDescriptor().getName()+"/index.vm");
-				try {
-					BufferedWriter writ = new BufferedWriter(new FileWriter(filevm));
-					writ.write(sbvm.toString());
-					writ.close();
-				} catch (Exception e) {
-					e.printStackTrace();
-				} 
+				if(!filevm.exists()){
+					try {
+						BufferedWriter writ = new BufferedWriter(new FileWriter(filevm));
+						writ.write(sbvm.toString());
+						writ.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					} 
+				}
 			}
 			i++;
 		}

@@ -562,6 +562,9 @@
 			<result name="success" type="velocity">
 				/view/module/role_privilage/buildSuccess.vm
 			</result>
+			<result name="fileExist" type="velocity">
+				/view/module/role_privilage/fileExist.vm
+			</result>
 		</action>
 	</package>
 	<!-- Password And Profile -->

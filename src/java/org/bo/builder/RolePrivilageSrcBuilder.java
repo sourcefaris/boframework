@@ -8,12 +8,12 @@ import java.util.List;
 
 import org.bo.DefaultAction;
 import org.bo.entity.RolePrivilage;
-import org.bo.util.PropertyLooker;
 
 public class RolePrivilageSrcBuilder extends DefaultAction {
 	StringBuilder sbxml = new StringBuilder();
 	StringBuilder sbvm = new StringBuilder();
 	File filevm = null;
+	File filexml;
 	private String id,directory,rolename;
 	
 
@@ -41,15 +41,19 @@ public class RolePrivilageSrcBuilder extends DefaultAction {
 
 		sbxml.append("</struts>");
 		(new File(getDirectory()+"/src/java")).mkdirs();
-		File filexml = new File(getDirectory()+"/src/java/struts-"+rolename+".xml");
-		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(filexml));
-			writer.write(sbxml.toString());
-			writer.close();
-		} catch (Exception e) {
-			e.printStackTrace();
+		filexml = new File(getDirectory()+"/src/java/struts-"+rolename+".xml");
+		if(filexml.exists()){
+			return "fileExist";
+		} else {
+			try {
+				BufferedWriter writer = new BufferedWriter(new FileWriter(filexml));
+				writer.write(sbxml.toString());
+				writer.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return SUCCESS;
 		}
-		return SUCCESS;
 	}
 	
 	public String getId() {
@@ -65,9 +69,8 @@ public class RolePrivilageSrcBuilder extends DefaultAction {
 	public void setDirectory(String directory) {
 		this.directory = directory;
 	}
-	public String getDefaultDirectory(){
-		return PropertyLooker.get("aplication.workspace.default");
+	public String getFileXml() {
+		return filexml.getPath();
 	}
-	
 	
 }

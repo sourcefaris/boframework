@@ -63,8 +63,8 @@
     <td id="tableHeader1" colspan="2">Build Source Project</td>
   	</tr>
 	<tr bgcolor="#e4e4e4">
-	  <td id="tableHeader2">Folder Project Location :</td>
-	  <td><input type="text" name="directory" value="$!defaultDirectory" size="50" STYLE="background-color: #FFFFFF;"><input type="hidden" name="id" value="$!role.id">&nbsp;&nbsp;<input type="submit" value="Build"></td>
+	  <td id="tableHeader2">Folder <b>src</b> Location&nbsp;<i>*to change default, please edit parameter 'application.workspace.default' in 'conf.properties'</i>&nbsp;* </td>
+	  <td><input type="text" name="directory" value="$!defaultDirectory" size="40" STYLE="background-color: #FFFFFF;"><input type="hidden" name="id" value="$!role.id">&nbsp;&nbsp;<input type="submit" value="Build"></td>
     </tr>
   </tbody>
 </table>
