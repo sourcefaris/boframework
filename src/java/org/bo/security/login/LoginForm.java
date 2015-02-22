@@ -29,7 +29,6 @@ public class LoginForm extends DefaultAction implements UserAccessorAware {
 	List<RoleSite> roleSites = new ArrayList<RoleSite>();
 
 	public String execute() {
-		GenerateMenu.run();
 		if (ActionContext.getContext().getSession().get(
 				LoginFilter.LOGIN_GA_USER) != null) { // sudah login
 			

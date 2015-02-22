@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.struts2.ServletActionContext;
+import org.bo.GenerateMenu;
 import org.bo.entity.Descriptor;
 import org.bo.entity.ModuleFunction;
 import org.bo.entity.Role;
@@ -33,7 +34,7 @@ public class DefaultInterceptor implements Interceptor, PersistenceAware,
 	}
 
 	public void init() {
-
+		GenerateMenu.run();
 	}
 
 	public String intercept(ActionInvocation actionInvocation) throws Exception {
