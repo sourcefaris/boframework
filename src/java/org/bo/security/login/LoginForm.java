@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bo.DefaultAction;
-import org.bo.GenerateMenu;
 import org.bo.entity.Role;
 import org.bo.entity.RoleSite;
 import org.bo.entity.Site;
