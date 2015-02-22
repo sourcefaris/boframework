@@ -41,7 +41,7 @@
       </tr>
       <tr bgcolor="#e4e4e4">
         <td colspan="2"><input name="Submit" value="Update" type="submit">&nbsp;&nbsp;
-        <input name="Clear" value="Reset" type="reset"> <input type="hidden" name="id" value="$role.id"></td>
+        <input type="hidden" name="id" value="$role.id"></td>
       </tr>
     </tbody>
   </table>

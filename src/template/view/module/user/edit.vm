@@ -67,8 +67,7 @@ Add a new Company</title>
 										
 	<td colspan="2">
 		<input type="hidden" name="user.password" value="$!user.password"/>
-		<input value="Save" type="submit"> 
-	  <input value="Reset" type="reset">
+		<input value="Save" type="submit">
 	  <input type="hidden" name="user.id" value="$!user.id"/>
 	  </td></table>
 	   </tr>

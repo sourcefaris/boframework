@@ -39,7 +39,7 @@
   	</td>
   </tr>
   <tr bgcolor="#e4e4e4">
-  	<td colspan="2"><input type="hidden" name="id" value="$!descriptor.id"><input type="submit" value="Update"><input type="reset" value="Reset">
+  	<td colspan="2"><input type="hidden" name="id" value="$!descriptor.id"><input type="submit" value="Update">
 </td>
   	</td>
   </tr>

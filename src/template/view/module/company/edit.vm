@@ -59,7 +59,7 @@
   <tr bgcolor="#e4e4e4">
   	<td colspan="2">
   	<input type="hidden" name="id" value="$company.id">
-  	<input type="submit" value="Update"><input type="reset" value="Reset">
+  	<input type="submit" value="Update">
 </td>
   	</td>
   </tr>

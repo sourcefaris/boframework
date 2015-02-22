@@ -52,7 +52,6 @@
   <td colspan="3"> 
   <input type="hidden" name="id" value="$id">
 	<input type="submit" name="Submit" value="Update" onClick="doUpload()">&nbsp;&nbsp;
-	<input type="reset" name="Clear">
   </td>
   </tr>
 </table>
