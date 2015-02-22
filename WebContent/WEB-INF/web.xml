@@ -85,7 +85,11 @@
 	<!-- Error 500 Handler -->
 	<error-page>
 		<error-code>500</error-code>
-		<location>/500.jsp</location>
+		<location>/errors/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors/404.jsp</location>
 	</error-page>
 
 
