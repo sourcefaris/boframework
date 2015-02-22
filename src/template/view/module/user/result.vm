@@ -44,8 +44,8 @@
 		<td>$!u.company.name</td>
 		<td>$!u.role.name</td>
 		<td nowrap="true" align="center">
-			<div align="center"><a href="edit.action?user.id=$!u.Id" title="Edit"><img src="../../images/silk/page_edit.png" border="0"></a>   
-			<a href="confirmDelete.action?user.id=$!u.Id" title="Delete"><img src="../../images/silk/delete.png" border="0"></a>  
+			<div align="center"><a href="edit.action?id=$!u.Id" title="Edit"><img src="../../images/silk/page_edit.png" border="0"></a>   
+			<a href="confirmDelete.action?id=$!u.Id" title="Delete"><img src="../../images/silk/delete.png" border="0"></a>  
 		</td>
 	</tr>
 #end

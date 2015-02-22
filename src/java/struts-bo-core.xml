@@ -655,7 +655,7 @@
 				/view/module/user/Success.vm
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.security.actions.usermanager.UserForm">
+		<action name="confirmDelete" class="org.bo.security.actions.usermanager.ViewUser">
 			<result name="success" type="velocity">
 				/view/module/user/confirmDelete.vm
 			</result>
@@ -679,7 +679,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="edit" class="org.bo.security.actions.usermanager.UserForm">
+		<action name="edit" class="org.bo.security.actions.usermanager.ViewUser">
 			<result name="success" type="velocity">
 				/view/module/user/edit.vm
 			</result>
