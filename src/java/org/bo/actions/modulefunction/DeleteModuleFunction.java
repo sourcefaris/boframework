@@ -8,19 +8,8 @@ public class DeleteModuleFunction extends ViewModuleFunction {
 		String result = super.execute();
 
 		if (result.equalsIgnoreCase(SUCCESS)) {
-			ModuleFunction mf = moduleFunction.getModuleFunction();
-			if (mf != null) {
-				mf.getModuleFunctions().remove(moduleFunction);
-				moduleFunction.setModuleFunction(null);
-				persistence.save(mf);
-			}
-			persistence.save(moduleFunction);
 			moduleFunction = (ModuleFunction) persistence.getById(
 					ModuleFunction.class, moduleFunction.getId());
-			for (ModuleFunction m : moduleFunction.getModuleFunctions()) {
-				m.setModuleFunction(null);
-				persistence.save(m);
-			}
 			persistence.remove(moduleFunction);
 			return SUCCESS;
 
