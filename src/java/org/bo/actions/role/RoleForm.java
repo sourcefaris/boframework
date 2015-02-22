@@ -11,6 +11,8 @@ public class RoleForm extends DefaultAction {
 	private String description = "";
 
 	public String execute() {
+		if(getId()!=null&&!"".equalsIgnoreCase(getId().trim()))
+			role = (Role) persistence.getById(Role.class, getId());
 		return SUCCESS;
 	}
 

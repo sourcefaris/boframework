@@ -11,10 +11,12 @@ public class DescriptorForm extends DefaultAction {
 	private String name = "";
 	private String description = "";
 	private String actionName = "";
-	protected Descriptor descr = new Descriptor();
+	protected Descriptor descriptor = new Descriptor();
 	protected List<Descriptor> descrs = new ArrayList<Descriptor>();
 
 	public String execute() {
+		if(getId()!=null&&!"".equalsIgnoreCase(getId().trim()))
+			descriptor = (Descriptor) persistence.getById(Descriptor.class, getId());
 		return SUCCESS;
 	}
 
@@ -58,12 +60,12 @@ public class DescriptorForm extends DefaultAction {
 		this.actionName = actionName;
 	}
 
-	public Descriptor getDescr() {
-		return descr;
+	public Descriptor getDescriptor() {
+		return descriptor;
 	}
 
 	public void setDescr(Descriptor descr) {
-		this.descr = descr;
+		this.descriptor = descr;
 	}
 
 }

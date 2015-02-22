@@ -1,6 +1,6 @@
 package org.bo.actions.company;
 
-public class DeleteCompany extends ViewCompany {
+public class DeleteCompany extends CompanyForm {
 
 	public String execute() {
 

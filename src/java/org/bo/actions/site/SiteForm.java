@@ -2,9 +2,11 @@ package org.bo.actions.site;
 
 import org.bo.DefaultAction;
 import org.bo.LogInformation;
+import org.bo.entity.Site;
 
 public class SiteForm extends DefaultAction {
 	protected LogInformation logInfo;
+	protected Site site;
 	private String id = "";
 	private String name = "";
 	private String description = "";
@@ -21,6 +23,8 @@ public class SiteForm extends DefaultAction {
 	private String site_headline = "";
 
 	public String execute() {
+		if(getId()!=null && !"".equalsIgnoreCase(getId().trim()))
+			site = (Site) persistence.getById(Site.class, getId());
 		return SUCCESS;
 	}
 
@@ -134,6 +138,10 @@ public class SiteForm extends DefaultAction {
 
 	public void setUrl_branding(String url_branding) {
 		this.url_branding = url_branding;
+	}
+	
+	public Site getSite() {
+		return site;
 	}
 
 }

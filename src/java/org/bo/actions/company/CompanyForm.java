@@ -1,6 +1,7 @@
 package org.bo.actions.company;
 
 import org.bo.DefaultAction;
+import org.bo.entity.Company;
 
 public class CompanyForm extends DefaultAction {
 	private String id;
@@ -12,8 +13,11 @@ public class CompanyForm extends DefaultAction {
 	private String faximile = "";
 	private String website = "";
 	private String email = "";
+	protected Company company ;
 
 	public String execute() {
+		if(getId()!=null && !"".equalsIgnoreCase(getId().trim()))
+			company = (Company) persistence.getById(Company.class, getId());
 		return SUCCESS;
 	}
 
@@ -89,4 +93,7 @@ public class CompanyForm extends DefaultAction {
 		this.zip_number = zip_number;
 	}
 
+	public Company getCompany() {
+		return company;
+	}
 }

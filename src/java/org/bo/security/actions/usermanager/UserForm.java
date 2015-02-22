@@ -13,8 +13,11 @@ public class UserForm extends DefaultAction {
 	private Name name = new Name();
 	private Company company = new Company();
 	private Role role = new Role();
+	private String id;
 
 	public String execute() {
+		if(getId()!=null && !"".equalsIgnoreCase(getId().trim()))
+			user = (User) persistence.getById(User.class, getId());
 		return SUCCESS;
 	}
 
@@ -56,6 +59,14 @@ public class UserForm extends DefaultAction {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }

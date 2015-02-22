@@ -12,14 +12,21 @@ public class ModuleFunctionForm extends DefaultAction {
 	protected ModuleFunction moduleFunction;
 	protected LogInformation logInfo;
 
+	private String id;
 	private String name = "";
 	private String description = "";
 	private String moduleFunctionId = "";
 
 	private String moduleDescriptorId = "";
 	private List<Descriptor> moduleDescriptors = new ArrayList<Descriptor>();
+	private List<ModuleFunction> mfs;
 
 	public String execute() {
+		if (getId() != null && !"".equalsIgnoreCase(getId().trim())) {
+			moduleFunction = (ModuleFunction) persistence.getById(
+					ModuleFunction.class, getId());
+			mfs = moduleFunction.getModuleFunctions();
+		}
 		return SUCCESS;
 	}
 
@@ -77,6 +84,18 @@ public class ModuleFunctionForm extends DefaultAction {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public List<ModuleFunction> getMfs() {
+		return mfs;
 	}
 
 }

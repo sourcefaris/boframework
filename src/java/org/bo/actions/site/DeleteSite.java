@@ -1,6 +1,6 @@
 package org.bo.actions.site;
 
-public class DeleteSite extends ViewSite {
+public class DeleteSite extends SiteForm {
 
 	public String execute() {
 		if (super.execute().equalsIgnoreCase(SUCCESS)) {

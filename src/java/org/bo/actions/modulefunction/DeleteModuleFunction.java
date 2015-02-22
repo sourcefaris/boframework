@@ -3,7 +3,7 @@ package org.bo.actions.modulefunction;
 import org.bo.entity.ModuleFunction;
 
 
-public class DeleteModuleFunction extends ViewModuleFunction {
+public class DeleteModuleFunction extends ModuleFunctionForm {
 	public String execute() {
 		String result = super.execute();
 

@@ -1,6 +1,6 @@
 package org.bo.actions.descriptor;
 
-public class DeleteDescriptor extends ViewDescriptor {
+public class DeleteDescriptor extends DescriptorForm {
 
 	public String execute() {
 

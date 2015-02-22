@@ -1,6 +1,6 @@
 package org.bo.security.actions.usermanager;
 
-public class DeleteUser extends ViewUser {
+public class DeleteUser extends UserForm {
 
 	public String execute() {
 

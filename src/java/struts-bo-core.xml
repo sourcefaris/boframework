@@ -76,13 +76,13 @@
 			</result>
 			<result name="error">/errors/errors.vm</result>
 		</action>
-		<action name="view" class="org.bo.actions.site.ViewSite">
+		<action name="view" class="org.bo.actions.site.SiteForm">
 			<result name="success" type="velocity">
 				/view/module/site/view.vm
 			</result>
 			<result name="error">/errors/errors.vm</result>
 		</action>
-		<action name="edit" class="org.bo.actions.site.EditSite">
+		<action name="edit" class="org.bo.actions.site.SiteForm">
 			<result name="success" type="velocity">
 				/view/module/site/edit.vm
 			</result>
@@ -101,7 +101,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.actions.site.ViewSite">
+		<action name="confirmDelete" class="org.bo.actions.site.SiteForm">
 			<result name="success" type="velocity">
 				/view/module/site/confirmDelete.vm
 			</result>
@@ -155,7 +155,7 @@
 				/view/module/descriptor/list.vm
 			</result>
 		</action>
-		<action name="view" class="org.bo.actions.descriptor.ViewDescriptor">
+		<action name="view" class="org.bo.actions.descriptor.DescriptorForm">
 			<result name="success" type="velocity">
 				/view/module/descriptor/view.vm
 			</result>
@@ -163,7 +163,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="edit" class="org.bo.actions.descriptor.ViewDescriptor">
+		<action name="edit" class="org.bo.actions.descriptor.DescriptorForm">
 			<result name="success" type="velocity">
 				/view/module/descriptor/edit.vm
 			</result>
@@ -203,7 +203,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.actions.descriptor.ViewDescriptor">
+		<action name="confirmDelete" class="org.bo.actions.descriptor.DescriptorForm">
 			<result name="success" type="velocity">
 				/view/module/descriptor/confirmDelete.vm
 			</result>
@@ -271,7 +271,7 @@
 				/errors/notfound.jsp
 			</result>
 		</action>
-		<action name="viewModuleFunction" class="org.bo.actions.modulefunction.ViewModuleFunction">
+		<action name="viewModuleFunction" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
 				/view/module/module_function/viewModuleFunction.vm
 			</result>
@@ -279,7 +279,7 @@
 				/errors/notfound.jsp
 			</result>
 		</action>
-		<action name="confirmDeleteModuleFunction" class="org.bo.actions.modulefunction.ViewModuleFunction">
+		<action name="confirmDeleteModuleFunction" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
 				/view/module/module_function/confirmDeleteModuleFunction.vm
 			</result>
@@ -299,7 +299,7 @@
 				/errors/notfound.jsp
 			</result>
 		</action>
-		<action name="editModuleFunction" class="org.bo.actions.modulefunction.ViewModuleFunction">
+		<action name="editModuleFunction" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
 				/view/module/module_function/editModuleFunction.vm
 			</result>
@@ -335,7 +335,7 @@
 				/view/module/workflow_role/list.vm
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.actions.role.ViewRole">
+		<action name="confirmDelete" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
 				/view/module/workflow_role/confirmDelete.vm
 			</result>
@@ -351,7 +351,7 @@
 				/errors/notfound.vm
 			</result>
 		</action>
-		<action name="edit" class="org.bo.actions.role.ViewRole">
+		<action name="edit" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
 				/view/module/workflow_role/edit.vm
 			</result>
@@ -373,7 +373,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="view" class="org.bo.actions.role.ViewRole">
+		<action name="view" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
 				/view/module/workflow_role/view.vm
 			</result>
@@ -416,7 +416,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="view" class="org.bo.actions.company.ViewCompany">
+		<action name="view" class="org.bo.actions.company.CompanyForm">
 			<result name="success" type="velocity">
 				/view/module/company/view.vm
 			</result>
@@ -424,7 +424,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="edit" class="org.bo.actions.company.ViewCompany">
+		<action name="edit" class="org.bo.actions.company.CompanyForm">
 			<result name="success" type="velocity">
 				/view/module/company/edit.vm
 			</result>
@@ -464,7 +464,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.actions.company.ViewCompany">
+		<action name="confirmDelete" class="org.bo.actions.company.CompanyForm">
 			<result name="success" type="velocity">
 				/view/module/company/confirmDelete.vm
 			</result>
@@ -483,7 +483,7 @@
 				/errors/notfound.jsp
 			</result>
 		</action>
-		<action name="view_privilage" class="org.bo.actions.role.ViewRole">
+		<action name="view_privilage" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
 				/view/module/role_privilage/view_privilage.vm
 			</result>
@@ -523,7 +523,7 @@
 				/errors/notfound.jsp
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.actions.role.ViewRole">
+		<action name="confirmDelete" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
 				/view/module/role_privilage/confirmDelete.vm
 			</result>
@@ -539,7 +539,7 @@
 				/errors/notfound.vm
 			</result>
 		</action>
-		<action name="edit" class="org.bo.actions.role.ViewRole">
+		<action name="edit" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
 				/view/module/workflow_role/edit.vm
 			</result>
@@ -655,7 +655,7 @@
 				/view/module/user/Success.vm
 			</result>
 		</action>
-		<action name="confirmDelete" class="org.bo.security.actions.usermanager.ViewUser">
+		<action name="confirmDelete" class="org.bo.security.actions.usermanager.UserForm">
 			<result name="success" type="velocity">
 				/view/module/user/confirmDelete.vm
 			</result>
@@ -679,7 +679,7 @@
 				/errors/errors.vm
 			</result>
 		</action>
-		<action name="edit" class="org.bo.security.actions.usermanager.ViewUser">
+		<action name="edit" class="org.bo.security.actions.usermanager.UserForm">
 			<result name="success" type="velocity">
 				/view/module/user/edit.vm
 			</result>
