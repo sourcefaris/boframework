@@ -12,13 +12,13 @@ import com.opensymphony.xwork2.validator.annotations.Validations;
 
 @Validation
 public class AddRole extends RoleForm{
+	Role role = new Role();
 
 	@Validations(requiredStrings = {
 			@RequiredStringValidator(fieldName = "name", message = "Name can't be empty."),
 			@RequiredStringValidator(fieldName = "description", message = "Description can't be empty.") 
 			})
 	public String execute() {
-		Role role = new Role();
 		
 		if (hasErrors()) {
 			return INPUT;
@@ -45,6 +45,12 @@ public class AddRole extends RoleForm{
 			persistence.save(role);
 			return SUCCESS;
 		} 
+	}
+	
+	@Override
+	public Role getRole() {
+		// TODO Auto-generated method stub
+		return role;
 	}
 
 
