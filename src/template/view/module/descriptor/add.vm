@@ -40,7 +40,7 @@ Add a new Descriptor</title>
       </tr>
       <tr bgcolor="#ffffff">
         <td style="font-weight: bold;" align="right" valign="top"><font color="red">* </font>Action Name:</td>
-        <td> <input name="actionName" value="$!actionName" size="20" type="text"> </td>
+        <td> <input name="actionName" value="$!actionName" size="55" type="text" maxlength="255"> </td>
       </tr>
       <tr bgcolor="#e4e4e4">
         <td colspan="3"><input name="Submit" value="Save" type="submit">&nbsp;&nbsp;

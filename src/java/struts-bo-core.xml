@@ -324,7 +324,7 @@
 		</action>
 		<action name="view_privilage" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/view_privilage.vm
+				/view/module/role_privilage/view_privilage.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -340,7 +340,7 @@
 		</action>
 		<action name="add" class="org.bo.actions.role.AddRole">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/view_privilage.vm
+				/view/module/role_privilage/view_privilage.vm
 			</result>
 			<result name="input" type="velocity">
 				/view/module/workflow_role/add.vm
@@ -399,7 +399,7 @@
 		</action>
 		<action name="filter" class="org.bo.actions.role.RoleFilter">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/filter_privilage.vm
+				/view/module/role_privilage/filter_privilage.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -407,10 +407,10 @@
 		</action>
 		<action name="rpbuilder" class="org.bo.builder.RolePrivilageSrcBuilder">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/buildSuccess.vm
+				/view/module/role_privilage/buildSuccess.vm
 			</result>
 			<result name="fileExist" type="velocity">
-				/view/module/workflow_role/fileExist.vm
+				/view/module/role_privilage/fileExist.vm
 			</result>
 		</action>
 		<action name="remove_privilage" class="org.bo.actions.role.RemoveRolePrivilage">
