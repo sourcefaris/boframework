@@ -25,7 +25,7 @@
       </tr>
       <tr bgcolor="#ffffff">
         <td style="font-weight: bold;" align="right" valign="top">Action Name:</td>
-        <td> <input name="actionName" value="$!actionName" size="55" type="text"> </td>
+        <td> <input name="actionName" value="$!actionName" size="20" type="text"> </td>
       </tr>
       <tr bgcolor="#e4e4e4">
         <td colspan="3"><input name="Submit" value="Search" type="submit">&nbsp;&nbsp;

@@ -35,7 +35,7 @@
   </tr>  
   <tr bgcolor="#ffffff">
   	<td style="font-weight: bold;" align="right" valign="top">Action Name:</td>
-  	<td><input type = "text" name="actionName" value="$!descriptor.actionName" maxlength="255">
+  	<td><input type = "text" name="actionName" value="$!descriptor.actionName" size="20"/>
   	</td>
   </tr>
   <tr bgcolor="#e4e4e4">
