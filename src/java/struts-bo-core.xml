@@ -213,18 +213,18 @@
 		</action>
 	</package>
 	<!--Module Function -->
-	<package name="moduleFunction" extends="default"
-		namespace="/module/module_function">
+	<package name="module" extends="default"
+		namespace="/module/module">
 		<!-- Descriptor -->
 		<action name="listModuleDescriptor" class="org.bo.actions.descriptor.ListDescriptor">
 			<result name="success" type="velocity">
-				/view/module/module_function/listModuleDescriptor.vm
+				/view/module/module/listModuleDescriptor.vm
 			</result>
 		</action>
 		<!-- End Descriptor -->
 		<action name="create" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
-				/view/module/module_function/addModuleFunction.vm
+				/view/module/module/addModuleFunction.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -232,10 +232,10 @@
 		</action>
 		<action name="addModuleFunction" class="org.bo.actions.modulefunction.AddModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module_function/addSuccess.vm
+				/view/module/module/addSuccess.vm
 			</result>
 			<result name="input" type="velocity">
-				/view/module/module_function/addModuleFunction.vm
+				/view/module/module/addModuleFunction.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -244,28 +244,28 @@
 		<action name="listModulePrivilage"
 			class="org.bo.actions.modulefunction.ListModulePrivilage">
 			<result name="success" type="velocity">
-				/view/module/module_function/listModulePrivilage.vm
+				/view/module/module/listModulePrivilage.vm
 			</result>
 		</action>
 		<action name="listModuleFunction" class="org.bo.actions.modulefunction.ListModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module_function/listModuleFunction.vm
+				/view/module/module/listModuleFunction.vm
 			</result>
 		</action>
 		<action name="listThreadNumber" class="org.bo.actions.modulefunction.ListModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module_function/listThreadNumber.vm
+				/view/module/module/listThreadNumber.vm
 			</result>
 		</action>
 		<action name="filter" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
-				/view/module/module_function/filterModuleFunction.vm
+				/view/module/module/filterModuleFunction.vm
 			</result>
 		</action>
 		<action name="searchModuleFunction"
 			class="org.bo.actions.modulefunction.SearchModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module_function/resultModuleFunction.vm
+				/view/module/module/resultModuleFunction.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -273,7 +273,7 @@
 		</action>
 		<action name="viewModuleFunction" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
-				/view/module/module_function/viewModuleFunction.vm
+				/view/module/module/viewModuleFunction.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -281,7 +281,7 @@
 		</action>
 		<action name="confirmDeleteModuleFunction" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
-				/view/module/module_function/confirmDeleteModuleFunction.vm
+				/view/module/module/confirmDeleteModuleFunction.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -290,10 +290,10 @@
 		<action name="deleteModuleFunction"
 			class="org.bo.actions.modulefunction.DeleteModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module_function/filterModuleFunction.vm
+				/view/module/module/filterModuleFunction.vm
 			</result>
 			<result name="input" type="velocity">
-				/view/module/module_function/confirmDeleteModuleFunction.vm
+				/view/module/module/confirmDeleteModuleFunction.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -301,30 +301,30 @@
 		</action>
 		<action name="editModuleFunction" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
-				/view/module/module_function/editModuleFunction.vm
+				/view/module/module/editModuleFunction.vm
 			</result>
 		</action>
 		<action name="upDateModuleFunction"
 			class="org.bo.actions.modulefunction.UpDateModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module_function/viewModuleFunction.vm
+				/view/module/module/viewModuleFunction.vm
 			</result>
 			<result name="input" type="velocity">
-				/view/module/module_function/editModuleFunction.vm
+				/view/module/module/editModuleFunction.vm
 			</result>
 		</action>
 		<!-- End Module Function -->
 	</package>
-	<!--WorkflowRole -->
-	<package name="workflowRole" extends="default" namespace="/module/workflow_role">
+	<!--Role -->
+	<package name="role" extends="default" namespace="/module/role">
 		<action name="create" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/add.vm
+				/view/module/role/add.vm
 			</result>
 		</action>
 		<action name="view_privilage" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
-				/view/module/role_privilage/view_privilage.vm
+				/view/module/role/view_privilage.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -340,20 +340,20 @@
 		</action>
 		<action name="add" class="org.bo.actions.role.AddRole">
 			<result name="success" type="velocity">
-				/view/module/role_privilage/view_privilage.vm
+				/view/module/role/view_privilage.vm
 			</result>
 			<result name="input" type="velocity">
-				/view/module/workflow_role/add.vm
+				/view/module/role/add.vm
 			</result>
 		</action>
 		<action name="list" class="org.bo.actions.role.ListRole">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/list.vm
+				/view/module/role/list.vm
 			</result>
 		</action>
 		<action name="confirmDelete" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/confirmDelete.vm
+				/view/module/role/confirmDelete.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.vm
@@ -369,13 +369,13 @@
 		</action>
 		<action name="edit" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/edit.vm
+				/view/module/role/edit.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/errors.vm
 			</result>
 			<result name="input" type="velocity">
-				/view/module/workflow_role/edit.vm
+				/view/module/role/edit.vm
 			</result>
 		</action>
 		<action name="update" class="org.bo.actions.role.EditRole">
@@ -383,7 +383,7 @@
 				view.action?id=${id}
 			</result>
 			<result name="input" type="velocity">
-				/view/module/workflow_role/edit.vm
+				/view/module/role/edit.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/errors.vm
@@ -391,7 +391,7 @@
 		</action>
 		<action name="view" class="org.bo.actions.role.RoleForm">
 			<result name="success" type="velocity">
-				/view/module/workflow_role/view.vm
+				/view/module/role/view.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/errors.vm
@@ -399,7 +399,7 @@
 		</action>
 		<action name="filter" class="org.bo.actions.role.RoleFilter">
 			<result name="success" type="velocity">
-				/view/module/role_privilage/filter_privilage.vm
+				/view/module/role/filter_privilage.vm
 			</result>
 			<result name="error" type="velocity">
 				/errors/notfound.jsp
@@ -407,10 +407,10 @@
 		</action>
 		<action name="rpbuilder" class="org.bo.builder.RolePrivilageSrcBuilder">
 			<result name="success" type="velocity">
-				/view/module/role_privilage/buildSuccess.vm
+				/view/module/role/buildSuccess.vm
 			</result>
 			<result name="fileExist" type="velocity">
-				/view/module/role_privilage/fileExist.vm
+				/view/module/role/fileExist.vm
 			</result>
 		</action>
 		<action name="remove_privilage" class="org.bo.actions.role.RemoveRolePrivilage">

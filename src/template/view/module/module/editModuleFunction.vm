@@ -34,7 +34,7 @@
      <td style="font-weight: bold;" align="right" valign="top">Descriptor:</td><td>
 	<input type="textfield" id="moduleDescriptorDescription" value="$!moduleFunction.moduleDescriptor.description" size="35" disabled="true" onfocus="this.blur()"/>
     <input type="hidden" id="moduleDescriptorId" name="moduleDescriptorId" value="$!moduleFunction.moduleDescriptor.id"/>
-    &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module_function/listModuleDescriptor.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
+    &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listModuleDescriptor.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
     &nbsp;&nbsp;&nbsp;<a href="../descriptor/edit.action?id=$moduleFunction.moduleDescriptor.Id" title="Edit"><img src="../../images/silk/page_edit.png" border="0"></a>
   	</td>
   
@@ -44,7 +44,7 @@
     <td>
     <input type="textfield" id="moduleFunctionName" value="$!moduleFunction.moduleFunction.name" size="35" disabled="true" onfocus="this.blur()"/>
     <input type="hidden" id="moduleFunctionId" name="moduleFunctionId" value="$!moduleFunction.moduleFunction.id"/>
-    &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module_function/listThreadNumber.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
+    &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listThreadNumber.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
     &nbsp;&nbsp;&nbsp;<a href="editModuleFunction.action?id=$moduleFunction.moduleFunction.Id" title="Edit"><img src="../../images/silk/page_edit.png" border="0"></a></td>
    </tr>
   

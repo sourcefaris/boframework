@@ -27,7 +27,7 @@
     <td>Module Function</td><td>
 	<input type="textfield" id="moduleFunctionName" value="" size="15" disabled="true" onfocus="this.blur()"/>
     <input type="hidden" id="moduleFunctionId" name="moduleFunctionId" value=""/>
-    &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module_function/listModulePrivilage.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
+    &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listModulePrivilage.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
   	</td>
   </tr>
   

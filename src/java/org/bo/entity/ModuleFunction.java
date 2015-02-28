@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import org.bo.DefaultPersistence;
 
 @Entity()
-@Table(name = "module_function")
+@Table(name = "module")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class ModuleFunction extends DefaultPersistence {
 

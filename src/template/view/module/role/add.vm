@@ -20,7 +20,7 @@
 #end
 #sfielderror()
 
-<a href="../workflow_role/filter.action">[ Existing Role ]</a><br><br>
+<a href="filter.action">[ Existing Role ]</a><br><br>
 
 <form method="post" action="add.action">
   <table bgcolor="#98COF4" border="0" cellpadding="5" cellspacing="1"

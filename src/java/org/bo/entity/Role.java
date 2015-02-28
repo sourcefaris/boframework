@@ -14,7 +14,7 @@ import org.bo.DefaultPersistence;
 
 
 @Entity()
-@Table(name="workflow_role")
+@Table(name="role")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class Role extends DefaultPersistence {
 	private String name;
