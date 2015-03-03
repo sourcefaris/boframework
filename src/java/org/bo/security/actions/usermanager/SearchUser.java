@@ -9,7 +9,7 @@ import org.bo.persistence.hibernate.HibernateSessionFactory;
 import org.bo.persistence.hibernate.HibernateSessionFactoryAware;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
-import org.hibernate.classic.Session;
+import org.hibernate.Session;
 import org.hibernate.criterion.Expression;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;

@@ -3,7 +3,7 @@ package org.bo.persistence.hibernate;
 import java.sql.SQLException;
 
 import org.hibernate.HibernateException;
-import org.hibernate.classic.Session;
+import org.hibernate.Session;
 
 public interface HibernateSessionFactory {
 

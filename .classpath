@@ -8,7 +8,6 @@
 	</classpathentry>
 	<classpathentry including="**/*.java" kind="src" path="src/template"/>
 	<classpathentry including="**/*.java" kind="src" path="src/config"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

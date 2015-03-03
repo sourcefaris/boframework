@@ -14,7 +14,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.classic.Session;
+import org.hibernate.Session;
 import org.hibernate.type.Type;
 
 public class HibernatePersistenceManager implements PersistenceManager,
@@ -126,27 +126,6 @@ public class HibernatePersistenceManager implements PersistenceManager,
 
 	public Object getById(Class aClass, long id) {
 		return session.load(aClass, new Long(id));
-	}
-
-	/**
-	 * @deprecated
-	 */
-	public List find(String query, Object[] parameters, Class[] parameterTypes) {
-		Session session = null;
-		List results = null;
-
-		session = this.session;
-
-		if ((parameterTypes != null) || (parameters != null)) {
-			Type[] hibernate_parameter_types = getHibernatedParameterTypes(parameterTypes);
-
-			results = session.find(query, parameters,
-					hibernate_parameter_types);
-		} else {
-			results = session.find(query);
-		}
-
-		return results;
 	}
 
 	public List getList(String query) {
