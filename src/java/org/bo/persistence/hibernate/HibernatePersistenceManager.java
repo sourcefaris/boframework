@@ -1,5 +1,6 @@
 package org.bo.persistence.hibernate;
 
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -23,7 +24,7 @@ public class HibernatePersistenceManager implements PersistenceManager,
 	private static Map classToHibernateTypeMap = new HashMap();
 
 	static {
-		classToHibernateTypeMap.put(Boolean.class, Hibernate.BIG_DECIMAL);
+		classToHibernateTypeMap.put(BigDecimal.class, Hibernate.BIG_DECIMAL);
 		classToHibernateTypeMap.put(Boolean.class, Hibernate.BOOLEAN);
 		classToHibernateTypeMap.put(Byte.class, Hibernate.BYTE);
 		classToHibernateTypeMap.put(Character.class, Hibernate.CHARACTER);
