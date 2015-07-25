@@ -47,6 +47,12 @@
     &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listThreadNumber.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
     &nbsp;&nbsp;&nbsp;<a href="editModuleFunction.action?id=$moduleFunction.moduleFunction.Id" title="Edit"><img src="../../images/silk/page_edit.png" border="0"></a></td>
    </tr>
+  <tr bgcolor="#ffffff">
+    <td style="font-weight: bold;" align="right" valign="top">
+    Sorting:
+    </td>
+    <td><input type="number" name="sorting" size="50" value="$moduleFunction.sorting"></td>
+  </tr>
   
   <tr bgcolor="#e4e4e4">
   <td colspan="3"> 

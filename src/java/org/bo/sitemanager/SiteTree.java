@@ -53,7 +53,7 @@ public class SiteTree extends DefaultAction {
 				mySQL = "FROM tmp in " + RoleSitePrivilage.class
 						+ " WHERE tmp.roleSite.site.id = '" + this.siteId
 						+ "' AND tmp.roleSite.role.id = '" + this.roleId
-						+ "' ORDER BY (tmp.moduleFunction.description)";
+						+ "' ORDER BY (tmp.moduleFunction.sorting)";
 				List<RoleSitePrivilage> rsp = new ArrayList<RoleSitePrivilage>();
 				rsp = (List<RoleSitePrivilage>) persistence.getList(mySQL);
 				for (RoleSitePrivilage tmp : rsp) {
@@ -74,7 +74,7 @@ public class SiteTree extends DefaultAction {
 				// read all module function from role_privilage
 				mySQL = "FROM tmp in " + RolePrivilage.class
 						+ " WHERE tmp.role.id='" + this.roleId
-						+ "' ORDER BY (tmp.moduleFunction.description)";
+						+ "' ORDER BY (tmp.moduleFunction.sorting)";
 				List<RolePrivilage> rp = new ArrayList<RolePrivilage>();
 				rp = (List<RolePrivilage>) persistence.getList(mySQL);
 				for (RolePrivilage tmp : rp) {

@@ -60,7 +60,7 @@ public class SiteTreeLeaf {
 
 		String sParentId="";
 		i=0;
-		mySQL = "FROM mf in " + ModuleFunction.class + " WHERE mf.moduleFunction.id = '" + this.sId + "' ORDER BY(mf.description)";
+		mySQL = "FROM mf in " + ModuleFunction.class + " WHERE mf.moduleFunction.id = '" + this.sId + "' ORDER BY(mf.sorting)";
 		List<ModuleFunction> modules = new ArrayList<ModuleFunction>();
 		modules = (List<ModuleFunction>)pm.getList(mySQL);
 		for(ModuleFunction mf : modules) { 

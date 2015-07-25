@@ -52,6 +52,12 @@
     &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listModuleDescriptor.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
   	</td>
   </tr>
+  <tr bgcolor="#ffffff">
+    <td style="font-weight: bold;" align="right" valign="top">
+    Sorting:
+    </td>
+    <td><input type="number" name="sorting" size="50" value="$!sorting"></td>
+  </tr>
   
   <tr bgcolor="#e4e4e4">
   <td colspan="3"> 

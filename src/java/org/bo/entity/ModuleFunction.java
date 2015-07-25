@@ -24,6 +24,7 @@ public class ModuleFunction extends DefaultPersistence {
 	private List<ModuleFunction> moduleFunctions;
 	private ModuleFunction moduleFunction;
 	private Descriptor moduleDescriptor;
+	private int sorting;
 
 	@ManyToOne
 	@JoinColumn(name = "descriptor_id")
@@ -68,6 +69,14 @@ public class ModuleFunction extends DefaultPersistence {
 
 	public void setModuleFunctions(List<ModuleFunction> moduleFunctions) {
 		this.moduleFunctions = moduleFunctions;
+	}
+	
+	public int getSorting() {
+		return sorting;
+	}
+	
+	public void setSorting(int sorting) {
+		this.sorting = sorting;
 	}
 
 }
