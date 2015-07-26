@@ -39,12 +39,7 @@ Add a new Company</title>
       <td>
         <input name="name.first" size="24" type="text" value="$!first_name">
       </td>         
-    </tr>
-    
-	<tr bgcolor="#ffffff"><td width="25%"><div align="right">Company<font color="red"> contains: </font></div></td><td><input type="textfield" id="perusahaanName" value="None" size="15" disabled="true" onfocus="this.blur()"/>&nbsp;
-        <input type="hidden" id="companyId" name="company.id" value="0"/>
-        <input type="button" value="View Company" onclick="javascript:window.open('../user/viewCompany.action','cats','scrollbars=yes,status=no,width=300,height=300')"/></td>
-	</tr>	     
+    </tr>     
 
 	<tr bgcolor="#ffffff"> 
       <td width="25%" align="right"> 

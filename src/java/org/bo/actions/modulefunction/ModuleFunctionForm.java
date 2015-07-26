@@ -16,6 +16,7 @@ public class ModuleFunctionForm extends DefaultAction {
 	private String name = "";
 	private String description = "";
 	private String moduleFunctionId = "";
+	private int sorting;
 
 	private String moduleDescriptorId = "";
 	private List<Descriptor> moduleDescriptors = new ArrayList<Descriptor>();
@@ -96,6 +97,14 @@ public class ModuleFunctionForm extends DefaultAction {
 
 	public List<ModuleFunction> getMfs() {
 		return mfs;
+	}
+	
+	public int getSorting() {
+		return sorting;
+	}
+	
+	public void setSorting(int sorting) {
+		this.sorting = sorting;
 	}
 
 }

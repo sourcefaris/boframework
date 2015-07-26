@@ -40,11 +40,6 @@ Add a new Company</title>
 	<tr bgcolor="#ffffff" valign="top"><td width="25%"><div align="right"><font color="red"></font>Last Name: 
 					</div></td><td><input maxlength="128" name="name.last" size="15" type="text" value="$!user.name.last"></tr>
 
-	<tr bgcolor="#ffffff" valign="top"><td width="25%"><div align="right"><font color="red">*</font>Company: 
-					</div></td><td><input type="textfield" id="perusahaanName" size="15" disabled="true" onfocus="this.blur()" value="$!user.company.name"/>&nbsp;
-					  <input type="hidden" id="companyId" name="company.id" value="$!user.company.id"/>&nbsp;
-					  <input type="button" value="View Company" onclick="javascript:window.open('../user/viewCompany.action','cats','scrollbars=yes,status=no,width=300,height=300')"/></td>
-	 
 	<tr bgcolor="#ffffff" valign="top"><td width="25%"><div align="right"><font color="red"></font>Email: 
 					</div></td><td><input maxlength="125" name="user.email" size="25" type="text" value="$!user.email"></tr>
 

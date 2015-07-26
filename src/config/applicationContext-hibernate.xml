@@ -26,13 +26,9 @@
 				<value>org.bo.entity.User</value>
 				<value>org.bo.entity.Role</value>
 				<value>org.bo.entity.RolePrivilage</value>
-				<value>org.bo.entity.RoleSite</value>
-				<value>org.bo.entity.RoleSitePrivilage</value>
-				<value>org.bo.entity.Site</value>
 				<value>org.bo.entity.Descriptor</value>
 
 				<value>org.bo.entity.ModuleFunction</value>
-				<value>org.bo.entity.Company</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

@@ -20,7 +20,6 @@ public class User extends DefaultPersistence {
 	private String password;
 	private Name name = new Name();
 	private Address address = new Address();
-	private Company company;
 	private Role role;
 	private String email;
 	private String description;
@@ -67,16 +66,6 @@ public class User extends DefaultPersistence {
 
 	public void setRole(Role role) {
 		this.role = role;
-	}
-
-	@ManyToOne
-	@JoinColumn(name = "company_id")
-	public Company getCompany() {
-		return company;
-	}
-
-	public void setCompany(Company company) {
-		this.company = company;
 	}
 
 	public String getEmail() {

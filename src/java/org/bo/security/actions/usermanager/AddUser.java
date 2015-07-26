@@ -5,7 +5,6 @@ import java.sql.Timestamp;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.bo.LogInformation;
-import org.bo.entity.Company;
 import org.bo.entity.Role;
 import org.bo.entity.User;
 import org.bo.util.StringUtils;
@@ -23,7 +22,6 @@ public class AddUser extends UserForm {
 					@RequiredStringValidator(fieldName = "user.username", message = "Username can not empty"),
 					@RequiredStringValidator(fieldName = "user.password", message = "Password can not empty"),
 					@RequiredStringValidator(fieldName = "name.first", message = "First name can not empty"),
-					@RequiredStringValidator(fieldName = "company.id", message = "Company can not empty"),
 					@RequiredStringValidator(fieldName = "role.id", message = "Role can not empty")
 			}, 
 			stringLengthFields = { 
@@ -38,15 +36,6 @@ public class AddUser extends UserForm {
 		if (hasErrors()) {
 			return INPUT;
 		} else {
-			if (getCompany().getId() != null
-					&& !"".equalsIgnoreCase(getCompany().getId())) {
-				setCompany((Company) persistence.getById(Company.class,
-						getCompany().getId()));
-			} else {
-				addActionError("Company can't be empty");
-				setUser(null);
-				return INPUT;
-			}
 
 			LogInformation log;
 			if (getUser().getId() == null) {
@@ -87,7 +76,6 @@ public class AddUser extends UserForm {
 			getUser().setLogInformation(log);
 			getUser().setAddress(getAddress());
 			getUser().setName(getName());
-			getUser().setCompany(getCompany());
 			getUser().setRole(getRole());
 			
 

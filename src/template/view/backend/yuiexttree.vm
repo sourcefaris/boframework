@@ -22,11 +22,10 @@
 	
   <div id="header" class="ylayout-inactive-content">
 	<div style="padding-top:0px;"><table width="100%"><tr width="100%">
-	<td><img src="#surl("value=$!logo")"></td>
+	<td><a href="#surl("value=/backend/user/index.action")" target="_parent" ><img src="#surl("value=$!logo")"></a></td>
 	<td align="right">
 		<font color="#ffffff"><strong>$!currentUser.name.first &nbsp;$!currentUser.name.last</strong></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="#surl("value=/user/password/edit.action")" target="main" ><font size="1" color="white" title="Change Password"><img src="#surl("value=/images/silk/key_add.png")" border="0"></font></a>&nbsp;<font color="white"></font>&nbsp;
-		<a href="#surl("value=/backend/user/index.action?roleSites=$!{roleSites}")" target="_parent" ><font size="1" color="white" title="Change Site"><img src="#surl("value=/images/silk/group_go.png")" border="0"></font></a>&nbsp;<font color="white"></font>&nbsp;
 		<a href="#surl("value=/backend/user/logout.action")" target="_parent" ><font size="1" color="white" title="Sign Out"><img src="#surl("value=/images/silk/delete.png")" border="0"></font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	</div>
   <div id="classes" class="ylayout-inactive-content">

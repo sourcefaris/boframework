@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.bo.DefaultAction;
 import org.bo.entity.Role;
-import org.bo.entity.RoleSite;
-import org.bo.entity.Site;
 import org.bo.entity.User;
 import org.bo.security.LoginFilter;
 import org.bo.security.UserAccessor;
@@ -21,11 +19,9 @@ public class LoginForm extends DefaultAction implements UserAccessorAware {
 	private String username = "";
 	private String password = "";
 	private User user = new User();
-	private Site site = new Site();
 	private Role role = new Role();
 	private List<User> users = new ArrayList<User>();
 	private String redirectUri;
-	List<RoleSite> roleSites = new ArrayList<RoleSite>();
 
 	public String execute() {
 		if (ActionContext.getContext().getSession().get(
@@ -33,13 +29,7 @@ public class LoginForm extends DefaultAction implements UserAccessorAware {
 			
 			getUser().setId(su.decodeBase64(ActionContext.getContext().getSession().get(LoginFilter.LOGIN_GA_USER).toString()));
 			setUser(ua.getById(getUser().getId()));
-			String sql = "FROM "+RoleSite.class.getName()+" rs WHERE rs.role.id ='"+getUser().getRole().getId()+"' ";
-			roleSites = persistence.getList(sql);
-			if(roleSites.size()>1) return "site";
-			else if (roleSites.size()==1){
-				setSite(roleSites.get(0).getSite());
-				return "continue";
-			} else return "continue";
+			return "continue";
 		} else { // belum login
 			return "login";
 		}
@@ -88,15 +78,6 @@ public class LoginForm extends DefaultAction implements UserAccessorAware {
 	public void setRedirectUri(String redirectUri) {
 		this.redirectUri = redirectUri;
 	}
-
-
-	public Site getSite() {
-		return site;
-	}
-
-	public void setSite(Site site) {
-		this.site = site;
-	}
 	
 	public boolean getAllowRegister(){
 		return Boolean.getBoolean(get("application.registration.public"));
@@ -122,14 +103,6 @@ public class LoginForm extends DefaultAction implements UserAccessorAware {
 
 	public void setRole(Role role) {
 		this.role = role;
-	}
-	
-	public List<RoleSite> getRoleSites() {
-		return roleSites;
-	}
-	
-	public void setRoleSites(List<RoleSite> roleSites) {
-		this.roleSites = roleSites;
 	}
 	
 }

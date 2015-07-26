@@ -61,6 +61,14 @@ public class ModuleFunction extends DefaultPersistence {
 	public void setModuleFunction(ModuleFunction moduleFunction) {
 		this.moduleFunction = moduleFunction;
 	}
+	
+	public int getSorting() {
+		return sorting;
+	}
+	
+	public void setSorting(int sorting) {
+		this.sorting = sorting;
+	}
 
 	@OneToMany(mappedBy = "moduleFunction", cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
 	public List<ModuleFunction> getModuleFunctions() {
@@ -69,14 +77,6 @@ public class ModuleFunction extends DefaultPersistence {
 
 	public void setModuleFunctions(List<ModuleFunction> moduleFunctions) {
 		this.moduleFunctions = moduleFunctions;
-	}
-	
-	public int getSorting() {
-		return sorting;
-	}
-	
-	public void setSorting(int sorting) {
-		this.sorting = sorting;
 	}
 
 }

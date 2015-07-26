@@ -52,6 +52,7 @@ public class UpDateModuleFunction extends ModuleFunctionForm {
 		moduleFunction.setDescription(getDescription());
 		moduleFunction.setModuleDescriptor(moduleDescriptor);
 		moduleFunction.setModuleFunction(mf);
+		moduleFunction.setSorting(getSorting());
 
 		logInfo = moduleFunction.getLogInformation();
 		logInfo.setLastUpdateBy(getCurrentUser().getId());

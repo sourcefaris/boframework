@@ -18,9 +18,6 @@
 			<result name="login" type="velocity">
 				/view/frontpage/login/login.vm
 			</result>
-			<result name="site" type="velocity">
-				/view/frontpage/login/site.vm
-			</result>
 			<result name="continue" type="redirect">
 				../yuitree.action
 			</result>
@@ -59,78 +56,7 @@
 		</action>
 	</package>
 
-	<!--Site -->
-	<package name="site" extends="default" namespace="/module/site">
-		<action name="create" class="org.bo.actions.site.SiteForm">
-			<result name="success" type="velocity">
-				/view/module/site/add.vm
-			</result>
-			<result name="error">/errors/errors.vm</result>
-		</action>
-		<action name="add" class="org.bo.actions.site.AddSite">
-			<result name="success" type="velocity">
-				/view/module/site/addSuccess.vm
-			</result>
-			<result name="input" type="velocity">
-				/view/module/site/add.vm
-			</result>
-			<result name="error">/errors/errors.vm</result>
-		</action>
-		<action name="view" class="org.bo.actions.site.SiteForm">
-			<result name="success" type="velocity">
-				/view/module/site/view.vm
-			</result>
-			<result name="error">/errors/errors.vm</result>
-		</action>
-		<action name="edit" class="org.bo.actions.site.SiteForm">
-			<result name="success" type="velocity">
-				/view/module/site/edit.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="update" class="org.bo.actions.site.UpdateSite">
-			<result name="success" type="redirect">
-				view.action?id=${id}
-			</result>
-			<result name="input" type="velocity">
-				/view/module/site/edit.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="confirmDelete" class="org.bo.actions.site.SiteForm">
-			<result name="success" type="velocity">
-				/view/module/site/confirmDelete.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="delete" class="org.bo.actions.site.DeleteSite">
-			<result name="success" type="velocity">
-				/view/module/site/deleteSuccess.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="filter" class="org.bo.actions.site.SiteForm">
-			<result name="success" type="velocity">
-				/view/module/site/filter.vm
-			</result>
-		</action>
-		<action name="search" class="org.bo.actions.site.SearchSite">
-			<result name="success" type="velocity">
-				/view/module/site/result.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-	</package>
+	
 	<!--Descriptor -->
 	<package name="descriptor" extends="default" namespace="/module/descriptor">
 
@@ -422,81 +348,7 @@
 			</result>
 		</action>
 	</package>
-	<!--Company -->
-	<package name="company" extends="default" namespace="/module/company">
-		<action name="create" class="org.bo.actions.company.CompanyForm">
-			<result name="success" type="velocity">
-				/view/module/company/add.vm
-			</result>
-		</action>
-		<action name="add" class="org.bo.actions.company.AddCompany">
-			<result name="success" type="velocity">
-				/view/module/company/addSuccess.vm
-			</result>
-			<result name="input" type="velocity">
-				/view/module/company/add.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="view" class="org.bo.actions.company.CompanyForm">
-			<result name="success" type="velocity">
-				/view/module/company/view.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="edit" class="org.bo.actions.company.CompanyForm">
-			<result name="success" type="velocity">
-				/view/module/company/edit.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="update" class="org.bo.actions.company.EditCompany">
-			<result name="success" type="redirect">
-				view.action?id=${id}
-			</result>
-			<result name="input" type="velocity">
-				/view/module/company/edit.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="filter" class="org.bo.actions.company.CompanyForm">
-			<result name="success" type="velocity">
-				/view/module/company/filter.vm
-			</result>
-		</action>
-		<action name="search" class="org.bo.actions.company.SearchCompany">
-			<result name="success" type="velocity">
-				/view/module/company/result.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="delete" class="org.bo.actions.company.DeleteCompany">
-			<result name="success" type="velocity">
-				/view/module/company/deleteSuccess.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="confirmDelete" class="org.bo.actions.company.CompanyForm">
-			<result name="success" type="velocity">
-				/view/module/company/confirmDelete.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-	</package>
+	
 	<!-- Password And Profile -->
 	<package name="password" extends="default" namespace="/user/password">
 		<action name="edit" class="org.bo.password.PasswordForm">
@@ -557,12 +409,6 @@
 				/view/module/user/result.vm
 			</result>
 			<result name="error">/errors/notfound.jsp</result>
-		</action>
-		<action name="viewCompany"
-			class="org.bo.security.actions.usermanager.ViewListCompany">
-			<result name="success" type="velocity">
-				/view/module/user/viewCompany.vm
-			</result>
 		</action>
 		<action name="viewRole" class="org.bo.actions.role.ListRole">
 			<result name="success" type="velocity">
@@ -629,95 +475,7 @@
 			</result>
 		</action>
 	</package>
-	<!--Role Site -->
-	<package name="rolesite" extends="default" namespace="/module/rolesite">
-		<action name="create" class="org.bo.actions.rolesite.RoleSiteForm">
-			<result name="success" type="velocity">
-				/view/module/rolesite/rolelist.vm
-			</result>
-		</action>
-		<action name="view" class="org.bo.actions.rolesite.RoleSiteForm">
-			<result name="success" type="velocity">
-				/view/module/rolesite/form.vm
-			</result>
-		</action>
-		<action name="save" class="org.bo.actions.rolesite.SaveRoleSite">
-			<result name="success" type="redirect">
-				view.action?role.id=${role.id}
-			</result>
-			<result name="input" type="redirect">
-				view.action?role.id=${role.id}
-			</result>
-			<result name="select_role" type="redirect">
-				create.action
-			</result>
-		</action>
-		<action name="delete" class="org.bo.actions.rolesite.DeleteRoleSite">
-			<result name="success" type="redirect">
-				view.action?role.id=${role.id}
-			</result>
-		</action>
-		<action name="viewSite" class="org.bo.actions.site.ListSite">
-			<result name="success" type="velocity">
-				/view/module/site/listsite.vm
-			</result>
-		</action>
-	</package>
-
-	<!--Role Site Privilage -->
-	<package name="role_site_privilage" extends="default"
-		namespace="/module/rsp">
-		<action name="create" class="org.bo.security.actions.rsp.Master">
-			<result name="success" type="velocity">
-				/view/module/rsp/rolelist.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/notfound.jsp
-			</result>
-		</action>
-		<action name="sitelist" class="org.bo.security.actions.rsp.Master">
-			<result name="success" type="velocity">
-				/view/module/rsp/sitelist.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="master" class="org.bo.security.actions.rsp.Master">
-			<result name="success" type="velocity">
-				/view/module/rsp/master.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-		<action name="addmodulfunction" class="org.bo.security.actions.rsp.AddRoleSitePrivilage">
-			<result name="success" type="redirect">
-				master.action?roleSite.id=${roleSite.id}
-			</result>
-			<result name="input" type="redirect">
-				master.action?roleSite.id=${roleSite.id}&amp;fieldErrors=${fieldErrors}
-			</result>
-		</action>
-		<action name="viewmfuntion" class="org.bo.security.actions.rsp.ViewMod">
-			<result name="success" type="velocity">
-				/view/module/rsp/viewmfunction.vm
-			</result>
-		</action>
-		<action name="delete" class="org.bo.security.actions.rsp.Delete">
-			<result name="success" type="redirect">
-				master.action?roleSite.id=${roleSite.id}
-			</result>
-		</action>
-		<action name="finish" class="org.bo.security.actions.rsp.Master">
-			<result name="success" type="velocity">
-				/view/module/rsp/addSuccess.vm
-			</result>
-			<result name="error" type="velocity">
-				/errors/errors.vm
-			</result>
-		</action>
-	</package>
+	
 	<package name="registration" extends="default" namespace="/">
 		<action name="register" class="org.bo.registration.RegistrationForm">
 			<result name="success" type="velocity">/view/frontpage/register/register.vm

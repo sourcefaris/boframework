@@ -9,7 +9,6 @@ import org.bo.entity.Descriptor;
 import org.bo.entity.ModuleFunction;
 import org.bo.entity.Role;
 import org.bo.entity.RolePrivilage;
-import org.bo.entity.RoleSitePrivilage;
 import org.bo.entity.User;
 import org.bo.persistence.PersistenceAware;
 import org.bo.persistence.PersistenceManager;
@@ -69,28 +68,14 @@ public class DefaultInterceptor implements Interceptor, PersistenceAware,
 		List<ModuleFunction> modules = new ArrayList<ModuleFunction>();
 
 		String mySQL;
-		if (siteId != null && !"".equalsIgnoreCase(siteId)) {
-			// read all module function from role_site_privilage.
-			mySQL = "SELECT rsp FROM " + RoleSitePrivilage.class.getName()
-					+ " rsp WHERE rsp.roleSite.site.id = '" + siteId
-					+ "' AND rsp.roleSite.role.id = '" + currentRole.getId()+"'";
-			List<RoleSitePrivilage> rsp = new ArrayList<RoleSitePrivilage>();
-			rsp = (List<RoleSitePrivilage>) manager.getList(mySQL);
-			for (RoleSitePrivilage tmp : rsp) {
-				if (checkLeafDescriptor(tmp.getModuleFunction())) {
-					return true;
-				}
-			}
-		} else {
-			// read all module function from role_privilage
-			mySQL = "SELECT rp FROM " + RolePrivilage.class.getName()
-					+ " rp WHERE rp.role.id='" + currentRole.getId()+"'";
-			List<RolePrivilage> rp = new ArrayList<RolePrivilage>();
-			rp = (List<RolePrivilage>) manager.getList(mySQL);
-			for (RolePrivilage tmp : rp) {
-				if (checkLeafDescriptor(tmp.getModuleFunction())) {
-					return true;
-				}
+		// read all module function from role_privilage
+		mySQL = "SELECT rp FROM " + RolePrivilage.class.getName()
+				+ " rp WHERE rp.role.id='" + currentRole.getId()+"'";
+		List<RolePrivilage> rp = new ArrayList<RolePrivilage>();
+		rp = (List<RolePrivilage>) manager.getList(mySQL);
+		for (RolePrivilage tmp : rp) {
+			if (checkLeafDescriptor(tmp.getModuleFunction())) {
+				return true;
 			}
 		}
 		return false;

@@ -45,6 +45,7 @@ public class AddModuleFunction extends ModuleFunctionForm {
 		moduleFunction.setDescription(getDescription());
 		moduleFunction.setModuleDescriptor(moduleDescriptor);
 		moduleFunction.setModuleFunction(mf);
+		moduleFunction.setSorting(getSorting());
 
 		logInfo = new LogInformation();
 		logInfo.setCreateBy(getCurrentUser().getId());
