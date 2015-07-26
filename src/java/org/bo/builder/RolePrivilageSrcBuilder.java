@@ -28,9 +28,9 @@ public class RolePrivilageSrcBuilder extends DefaultAction {
 		.append("\t\"http://struts.apache.org/dtds/struts-2.0.dtd\">\n\n<struts>\n");
 		
 		sbvm.append("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n")
-		.append("<title>Title</title><link type=\"text/css\" rel=\"stylesheet\" href=\"../../style.css\">\n</head>\n<body>\n<form method=\"post\" action='#'>\n")
+		.append("<title>Title</title>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"../../style.css\">\n</head>\n<body>\n<form method=\"post\" action='#'>\n")
 		.append("\t<table bgcolor=\"#98COF4\" border=\"0\" cellpadding=\"5\" cellspacing=\"1\" width=\"98%\">\n")
-		.append("\t\t<tr bgcolor=\"#d0dcff\"><td><strong>Form Title</strong></td></tr>\n\t\t<tr bgcolor=\"white\">\n\t\t\t<td>")
+		.append("\t\t<tr bgcolor=\"#d0dcff\">\n\t\t\t<td><strong>Form Title</strong></td>\n\t\t</tr>\n\t\t<tr bgcolor=\"white\">\n\t\t\t<td>")
 		.append("\t\t\t\tInsert Your Code Here .... !!\n\t\t\t</td>\n\t\t</tr>\n")
 		.append("\t\t<tr bgcolor=\"#e4e4e4\">\n\t\t\t<td><input type=\"submit\"/></td>\n\t\t</tr>\n\t</table>\n</body>\n</form>\n</html>");
 
