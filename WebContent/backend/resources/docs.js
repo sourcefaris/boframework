@@ -3,16 +3,10 @@ Ext.BLANK_IMAGE_URL = 's.gif';
 var Docs = function(){
     var layout, center;
     
-    var classClicked = function(e, target){
-        Docs.loadDoc(target.href);
-    };
-    
     return {
         init : function(){
-            // initialize state manager, we will use cookies
             Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
             
-            // create the main layout
             layout = new Ext.BorderLayout(document.body, {
                 north: {
                     split:false,
@@ -46,7 +40,7 @@ var Docs = function(){
             
             layout.add('west', new Ext.ContentPanel('classes', {title: 'N a v i g a t i o n', fitToFrame:true}));
             center = layout.getRegion('center');
-            center.add(new Ext.ContentPanel('main', {fitToFrame:true}));
+            center.add(new Ext.ContentPanel('frame', {fitToFrame:true}));
             
             layout.restoreState();
             layout.endUpdate();
@@ -65,15 +59,8 @@ var Docs = function(){
 				});
 				tree.setRootNode(root);
 
-                tree.on('click', function(n){
-                    if(n.isLeaf()){
-                        Docs.loadDoc('output/'+n.attributes.fullName+'.html');
-                    }
-                });
-
                 tree.render();
 			}else{
-            	 classes.on('click', classClicked, null, {delegate: 'a', stopEvent:true});
 		         classes.select('h3').each(function(el){
 		             var c = new NavNode(el.dom);
 		             if(!/^\s*(?:API Reference|Examples and Demos)\s*$/.test(el.dom.innerHTML)){
@@ -81,11 +68,7 @@ var Docs = function(){
 		             }
 		         });
 		    }
-            var page = window.location.href.split('#')[1];
-            if(!page){
-                page = 'welcome.html';
-            }
-            this.loadDoc(page);
+	
             // safari and opera have iframe sizing issue, relayout fixes it
 			if(Ext.isSafari || Ext.isOpera){
 				layout.layout();
@@ -107,10 +90,6 @@ var Docs = function(){
 				}
 			});
         },
-        
-        loadDoc : function(url){
-            Ext.get('main').dom.src = url;
-        }
     };
 }();
 Ext.onReady(Docs.init, Docs, true);

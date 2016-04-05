@@ -1,4 +1,3 @@
-
-<%
-	response.sendRedirect("backend/user/index.action"); 
-%>
+<script>
+	window.open("backend/user/index.action", "main");
+</script>

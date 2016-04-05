@@ -40,7 +40,7 @@ public class UpdatePassword extends PasswordForm implements UserAccessorAware {
 		User user;
 		LogInformation logInfo;
 
-		user = getCurrentUser();
+		user = (User) ua.getById(getCurrentUser().getId());
 		logInfo = user.getLogInformation();
 
 		logInfo.setActiveFlag(LogInformation.ACTIVE);

@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" target="_parent">
 <head>
   <title>BOFramework Project</title>
     <link rel="stylesheet" type="text/css" href="#surl("value=/backend/resources/collapser.css")"></link>
@@ -20,7 +20,7 @@
 
     <script type="text/javascript" src="#surl("value=/backend/resources/docs.js")"></script>
 	
-  <div id="header" class="ylayout-inactive-content">
+  <div id="header">
 	<div style="padding-top:0px;"><table width="100%"><tr width="100%">
 	<td><a href="#surl("value=/backend/user/index.action")" target="_parent" ><img src="#surl("value=$!logo")"></a></td>
 	<td align="right">
@@ -30,7 +30,7 @@
 	</div>
   <div id="classes" class="ylayout-inactive-content">
 	  <!-- BEGIN TREE -->
-      	<a id="welcome-link" href="welcome.html">Home</a>
+      	<a id="welcome-link" href="welcome.html" target="main">Home</a>
 		<!--start  -->
 		$tree_script
 		<!--finish-->
@@ -39,7 +39,7 @@
    	  <!-- END TREE -->
   </div>
   
-  <iframe id="main" name="main" frameborder="no"></iframe>
+  <iframe id="frame" name="main" frameborder="no" src="welcome.html"></iframe>
   </body>
 </html>
 

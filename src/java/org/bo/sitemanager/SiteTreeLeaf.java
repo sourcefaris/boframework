@@ -85,7 +85,7 @@ public class SiteTreeLeaf {
 				sUrlAction = "../module/"+mf.getModuleDescriptor().getName()+"/"+mf.getModuleDescriptor().getActionName();
 				MTMJavaScript = MTMJavaScript + "<div class=\"pkg-body\">";
 				
-				MTMJavaScript = MTMJavaScript + "<a href=\""+sUrlAction+".action\">"+mf.getDescription()+"</a>";
+				MTMJavaScript = MTMJavaScript + "<a target=\"main\" href=\""+sUrlAction+".action\">"+mf.getDescription()+"</a>";
 				MTMJavaScript = MTMJavaScript + "</div>";
 			}
 			i++;

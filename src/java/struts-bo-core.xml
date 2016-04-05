@@ -216,7 +216,7 @@
 		<action name="deleteModuleFunction"
 			class="org.bo.actions.modulefunction.DeleteModuleFunction">
 			<result name="success" type="velocity">
-				/view/module/module/filterModuleFunction.vm
+				/view/module/module/deleteSuccess.vm
 			</result>
 			<result name="input" type="velocity">
 				/view/module/module/confirmDeleteModuleFunction.vm
