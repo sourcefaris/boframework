@@ -38,9 +38,6 @@ public class DefaultInterceptor implements Interceptor, PersistenceAware,
 
 	public String intercept(ActionInvocation actionInvocation) throws Exception {
 		if (sessCredentials.getCurrentUser() != null) {
-			// init currentSite
-			siteId = (String) ServletActionContext.getRequest().getSession()
-					.getAttribute(LoginFilter.LOGIN_GS_SITE);
 			// init currentUser
 			currentUser = sessCredentials.getCurrentUser();
 			currentRole = currentUser.getRole();

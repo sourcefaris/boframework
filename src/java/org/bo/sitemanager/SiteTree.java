@@ -27,8 +27,6 @@ public class SiteTree extends DefaultAction {
 		try {
 			User us = getCurrentUser();
 			this.roleId = us.getRole().getId();
-			this.siteId = (String) ServletActionContext.getRequest()
-					.getSession().getAttribute(LoginFilter.LOGIN_GS_SITE);
 
 			int iFirstNode = 0;
 			

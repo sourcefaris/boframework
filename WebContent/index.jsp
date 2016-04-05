@@ -1,3 +1,3 @@
 <script>
-	window.open("backend/user/index.action", "main");
+	window.open("backend/user/index.action", "_parent");
 </script>

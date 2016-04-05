@@ -13,7 +13,7 @@ public class LoginFilter implements Filter {
     public static String LOGIN_KEY = "loggedIn";
     public static String LOGIN_USER = "user";
     public static String LOGIN_GA_USER = "GA_USER";
-	public static String LOGIN_GS_SITE = "GS_USER";
+
 
     private Set<String> extensions;
     private String loginAction;
@@ -27,8 +27,7 @@ public class LoginFilter implements Filter {
         
         String extension = servletPath.substring(servletPath.lastIndexOf('.') + 1).toLowerCase();
         
-        /* Uri */
-        String uri = req.getRequestURI();
+
         String contextPath = req.getContextPath();
         
         if (servletPath.equals(loginAction) || servletPath.equals(loginPage) || extensions.contains(extension)) {

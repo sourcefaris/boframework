@@ -8,7 +8,6 @@ public class Logout extends LoginForm {
 
     public String execute() {
         ActionContext.getContext().getSession().remove(LoginFilter.LOGIN_GA_USER);
-        ActionContext.getContext().getSession().remove(LoginFilter.LOGIN_GS_SITE);
         return SUCCESS;
     }
 
