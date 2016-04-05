@@ -112,7 +112,7 @@
   <br>
   
 </form>
-  <a href="#surlreqactmail.action">Request activation mail</a> 
+  <a href="reqactmail.action">Request activation mail</a> 
 
 </div>
 </body>

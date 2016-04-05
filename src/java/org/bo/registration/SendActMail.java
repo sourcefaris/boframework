@@ -28,7 +28,7 @@ public class SendActMail {
 			String href =  PropertyLooker.get("email.smtp.host") +"/activation.action?id=" + new StringUtils().encodeBase64(user.getId());
 			
 			mail.setHtmlMsg("<html><img src="+PropertyLooker.get("application.logo.url")+"><br><hr><br>" +
-					"Dear "+ user.getName().getFirst() + " " +user.getName().getLast()+",<br>Thank you for registering to Mervpolis. Before we can activate your account one last step must be taken to complete your registration.<br><br>" +
+					"Dear "+ user.getName().getFirst() + " " +user.getName().getLast()+",<br>Thank you for registering to Boframework. Before we can activate your account one last step must be taken to complete your registration.<br><br>" +
 							"Please note - you must complete this last step to become a registered member. You will only need to visit this url once to activate your account.<br><br>" +
 							"To complete your registration, please visit this url: <br>" +
 							"<a href="+href+">Click Here</a></html>");
