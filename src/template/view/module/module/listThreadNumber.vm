@@ -11,10 +11,6 @@
 #else
 
 <table width=100% border="0">
-<tr>
-	<td width=60%>None</td>
-	<td><input type="button" onClick="javascript:window.opener.document.getElementById('moduleFunctionId').value='';window.opener.document.getElementById('moduleFunctionId').value='None';window.close();" value="Set"></td>
-</tr>
 #foreach ($moduleFunction in $moduleFunctions)
 <tr>
 	<td width=60%>$moduleFunction.name</td>	

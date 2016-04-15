@@ -29,14 +29,14 @@
     <td><input type="text" name="name" value="$!descriptor.name" maxlength="128">
   </tr>
   <tr bgcolor="#ffffff">
-        <td style="font-weight: bold;" align="right" valign="top">Description:</td>
-        <td>
-        	<input maxlength="128" name="description" size="25" value="$!descriptor.description"></td>
-  </tr>  
-  <tr bgcolor="#ffffff">
-  	<td style="font-weight: bold;" align="right" valign="top">Action Name:</td>
-  	<td><input type = "text" name="actionName" value="$!descriptor.actionName" maxlength="255">
-  	</td>
+  	<td style="font-weight: bold;" align="right" valign="top">Action :</td>
+  	<td>
+        	<select name="actionName">
+        		<option value="form" #if($!descriptor.actionName=="form")selected#end>form</option>
+        		<option value="filter" #if($!descriptor.actionName=="filter")selected#end>filter</option>
+        		<option value="list" #if($!descriptor.actionName=="list")selected#end>list</option>
+        		<option value="view" #if($!descriptor.actionName=="view")selected#end>view</option>
+        	</select></td>
   </tr>
   <tr bgcolor="#e4e4e4">
   	<td colspan="2"><input type="hidden" name="id" value="$!descriptor.id"><input type="submit" value="Update">

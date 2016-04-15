@@ -14,7 +14,6 @@ import com.opensymphony.xwork2.validator.annotations.Validations;
 public class AddDescriptor extends DescriptorForm {
 	@Validations(requiredStrings = {
 			@RequiredStringValidator(fieldName = "name", message = "Please input name"),
-			@RequiredStringValidator(fieldName = "description", message = "Please input description"),
 			@RequiredStringValidator(fieldName = "actionName", message = "Please input action name") })
 			
 	public String execute() {
@@ -26,7 +25,6 @@ public class AddDescriptor extends DescriptorForm {
 			return INPUT;
 		} else {
 			descr.setName(getName());
-			descr.setDescription(getDescription());
 			descr.setActionName(getActionName());
 
 			LogInformation log = new LogInformation();

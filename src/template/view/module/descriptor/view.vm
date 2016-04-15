@@ -15,13 +15,11 @@
 	<tr bgcolor="#e4e4e4" width="98%">
 	
 	<td id="tableHeader2"><b>Name</b></td>
-	<td id="tableHeader2"><b>Description</b></td>
 	<td id="tableHeader2"><b>Action Name</b></td>
 	<td id="tableHeader2"><b>Action</b></td>
 	</tr>
 	<tr bgcolor="white">
-      <td>$!descriptor.Name</td>
-      <td>$!descriptor.Description</td>
+      <td>$!descriptor.name</td>
       <td>$!descriptor.actionName</td>
 	  <td id="tableHeader2" colspan="2"><a href="edit.action?id=$descriptor.Id" title="Edit"><img src="../../images/silk/page_edit.png" border="0"></a></a> &nbsp;
 		<a href="confirmDelete.action?id=$descriptor.Id" title="Delete"><img src="../../images/silk/delete.png" border="0"></a></a></td>

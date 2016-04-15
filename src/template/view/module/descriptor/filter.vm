@@ -18,14 +18,15 @@
         <td width="75%"><input maxlength="128" name="name" size="25" value="$!name"></td>
       </tr>
       <tr bgcolor="#ffffff">
-        <td style="font-weight: bold;" align="right" valign="top">Description:</td>
-        <td>
-        	<input maxlength="128" name="description" size="50" >
-         </td>
-      </tr>
-      <tr bgcolor="#ffffff">
-        <td style="font-weight: bold;" align="right" valign="top">Action Name:</td>
-        <td> <input name="actionName" value="$!actionName" size="55" type="text"> </td>
+        <td style="font-weight: bold;" align="right" valign="top">Action :</td>
+        <td> 
+        	<select name="actionName">
+        		<option value=""></option>
+        		<option value="form">form</option>
+        		<option value="filter">filter</option>
+        		<option value="list">list</option>
+        		<option value="view">view</option>
+        	</select></td>
       </tr>
       <tr bgcolor="#e4e4e4">
         <td colspan="3"><input name="Submit" value="Search" type="submit">&nbsp;&nbsp;

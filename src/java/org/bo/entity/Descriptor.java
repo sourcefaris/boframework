@@ -13,7 +13,6 @@ import org.bo.DefaultPersistence;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Descriptor extends DefaultPersistence {
 	private String name;
-	private String description;
 	private String action = "";
 
 	public String getName() {
@@ -22,14 +21,6 @@ public class Descriptor extends DefaultPersistence {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
 	}
 
 	@Column(name = "action")

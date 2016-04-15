@@ -32,15 +32,14 @@ Add a new Descriptor</title>
         <td width="75%"><input maxlength="128" name="name" size="25" value="$!name"></td>
       </tr>
       <tr bgcolor="#ffffff">
-        <td style="font-weight: bold;" align="right" valign="top">
-        <font color="red">*</font>
-        Description:
-        </td>
-        <td><input maxlength="128" name="description" size="50" value="$!description"></td>
-      </tr>
-      <tr bgcolor="#ffffff">
-        <td style="font-weight: bold;" align="right" valign="top"><font color="red">* </font>Action Name:</td>
-        <td> <input name="actionName" value="$!actionName" size="55" type="text" maxlength="255"> </td>
+        <td style="font-weight: bold;" align="right" valign="top"><font color="red">* </font>Action :</td>
+        <td> 
+        	<select name="actionName">
+        		<option value="form">form</option>
+        		<option value="filter">filter</option>
+        		<option value="list">list</option>
+        		<option value="view">view</option>
+        	</select>
       </tr>
       <tr bgcolor="#e4e4e4">
         <td colspan="3"><input name="Submit" value="Save" type="submit">&nbsp;&nbsp;

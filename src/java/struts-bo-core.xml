@@ -138,16 +138,15 @@
 			</result>
 		</action>
 	</package>
+	<!-- End Descriptor -->
 	<!--Module Function -->
 	<package name="module" extends="default"
 		namespace="/module/module">
-		<!-- Descriptor -->
 		<action name="listModuleDescriptor" class="org.bo.actions.descriptor.ListDescriptor">
 			<result name="success" type="velocity">
 				/view/module/module/listModuleDescriptor.vm
 			</result>
 		</action>
-		<!-- End Descriptor -->
 		<action name="create" class="org.bo.actions.modulefunction.ModuleFunctionForm">
 			<result name="success" type="velocity">
 				/view/module/module/addModuleFunction.vm

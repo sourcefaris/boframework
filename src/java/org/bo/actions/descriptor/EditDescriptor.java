@@ -19,12 +19,8 @@ public class EditDescriptor extends DescriptorForm {
 			if (getName().equalsIgnoreCase("")) {
 				addActionError("Name can't be empty");
 			}
-			if (getDescription().equalsIgnoreCase("")) {
-				addActionError("Description can't be empty");
-			}
 			
 			descr.setName(getName());
-			descr.setDescription(getDescription());
 			descr.setActionName(getActionName());
 
 			LogInformation log = descr.getLogInformation();

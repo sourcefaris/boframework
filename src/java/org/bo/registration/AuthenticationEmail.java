@@ -60,9 +60,9 @@ public class AuthenticationEmail extends DefaultAction {
 							+ cid
 							+ "\">"
 							+ "<br><hr><br>"
-							+ "<br>You are registered in Mervpolis "
+							+ "<br>You are registered in Boframework "
 							+ "Your account has been activated. You can log in now with your account.<br>"
-							+ "<br>To start using Mervpolis, click <a href=\""
+							+ "<br>To start using Boframework, click <a href=\""
 							+ ServletActionContext.getRequest().getContextPath()
 							+ "/backend/user/index.action\">here</a>."
 							+ "<br><br>Best regards,<br>"+PropertyLooker.get("application.activation.from.name")+"</html>");

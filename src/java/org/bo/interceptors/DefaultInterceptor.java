@@ -3,7 +3,6 @@ package org.bo.interceptors;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.struts2.ServletActionContext;
 import org.bo.GenerateMenu;
 import org.bo.entity.Descriptor;
 import org.bo.entity.ModuleFunction;
@@ -12,7 +11,6 @@ import org.bo.entity.RolePrivilage;
 import org.bo.entity.User;
 import org.bo.persistence.PersistenceAware;
 import org.bo.persistence.PersistenceManager;
-import org.bo.security.LoginFilter;
 import org.bo.security.SessionCredentials;
 import org.bo.security.SessionCredentialsAware;
 

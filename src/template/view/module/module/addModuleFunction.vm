@@ -38,8 +38,8 @@
    <tr bgcolor="#ffffff">
      <td style="font-weight: bold;" align="right" valign="top">Thread Master ID:</td>
     <td>
-    <input type="textfield" id="moduleFunctionName" value="None" size="15" disabled="true" onfocus="this.blur()"/>
-    <input type="hidden" id="moduleFunctionId" name="moduleFunctionId" value=""/>
+    <input type="textfield" id="moduleFunctionName" value="Master" size="15" disabled="true" onfocus="this.blur()"/>
+    <input type="hidden" id="moduleFunctionId" name="moduleFunctionId" value="0"/>
     &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listThreadNumber.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
     </td>
   </tr>
@@ -47,7 +47,7 @@
  
   <tr bgcolor="#ffffff">
      <td style="font-weight: bold;" align="right" valign="top">Descriptor:</td><td>
-	<input type="textfield" id="moduleDescriptorDescription" value="None" size="15" disabled="true" onfocus="this.blur()"/>
+	<input type="textfield" id="moduleDescriptorName" value="None" size="15" disabled="true" onfocus="this.blur()"/>
     <input type="hidden" id="moduleDescriptorId" name="moduleDescriptorId" value=""/>
     &nbsp;&nbsp;<input type="button" value="Change" onclick="javascript:window.open('../module/listModuleDescriptor.action','cats','scrollbars=yes,status=no,width=300,height=300')"/>
   	</td>
